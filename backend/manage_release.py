@@ -32,9 +32,13 @@ def main():
         else:
             report = restore_bundle(args.bundle, args.target)
     except LockBusy:
-        parser.exit(2, 'Stop the API before offline maintenance; its data directory is locked.\n')
+        parser.exit(2, f'[manage_release:{args.command}] Stop the API before offline maintenance; its data directory is locked.\n')
     except (ValueError, OSError, KeyError, sqlite3.Error) as error:
-        parser.exit(2, f'Maintenance refused ({type(error).__name__}); no existing destination was replaced.\n')
+        err_msg = str(error).strip()
+        err_type = type(error).__name__
+        detail = f': {err_msg}' if err_msg else ''
+        parser.exit(2, f'[manage_release:{args.command}] Maintenance refused ({err_type}){detail}; no existing destination was replaced.\n')
+
     print(json.dumps({'kind': report['kind'], 'verified': True, 'summary': report['summary']}))
 
 

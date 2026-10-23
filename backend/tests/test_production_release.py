@@ -186,6 +186,80 @@ def test_restore_refuses_existing_target(source_library, tmp_path):
     assert database.exists()
 
 
+def test_restore_supports_existing_empty_directory(source_library, tmp_path):
+    database, documents = source_library
+    bundle = tmp_path / 'backup'
+    release.backup_data(database, documents, bundle)
+    target = tmp_path / 'fresh_empty_target'
+    target.mkdir()
+    manifest = release.restore_bundle(bundle, target)
+    assert manifest['kind'] == 'full-backup'
+    assert (target / 'techquery.db').is_file()
+    assert (target / 'documents').is_dir()
+    assert release.verify_bundle(target)['summary'] == manifest['summary']
+
+
+def test_restore_supports_existing_directory_with_lost_and_found(source_library, tmp_path):
+    database, documents = source_library
+    bundle = tmp_path / 'backup'
+    release.backup_data(database, documents, bundle)
+    target = tmp_path / 'persistent_mount_target'
+    target.mkdir()
+    (target / 'lost+found').mkdir()
+    manifest = release.restore_bundle(bundle, target)
+    assert manifest['kind'] == 'full-backup'
+    assert (target / 'lost+found').is_dir()
+    assert (target / 'techquery.db').is_file()
+    assert release.verify_bundle(target)['summary'] == manifest['summary']
+
+
+def test_restore_cleans_up_stale_stage_from_interrupted_run(source_library, tmp_path):
+    database, documents = source_library
+    bundle = tmp_path / 'backup'
+    release.backup_data(database, documents, bundle)
+    target = tmp_path / 'interrupted_target'
+    target.mkdir()
+    stale = target / '.restore-stage-prior'
+    stale.mkdir()
+    (stale / 'partial.tmp').write_text('stale data')
+    manifest = release.restore_bundle(bundle, target)
+    assert not stale.exists()
+    assert (target / 'techquery.db').is_file()
+    assert release.verify_bundle(target)['summary'] == manifest['summary']
+
+
+def test_restore_refuses_directory_with_existing_user_files(source_library, tmp_path):
+    database, documents = source_library
+    bundle = tmp_path / 'backup'
+    release.backup_data(database, documents, bundle)
+    target = tmp_path / 'populated_target'
+    target.mkdir()
+    (target / 'user_data.txt').write_text('preserve this')
+    with pytest.raises(ValueError) as exc:
+        release.restore_bundle(bundle, target)
+    assert 'not empty' in str(exc.value)
+    assert (target / 'user_data.txt').read_text() == 'preserve this'
+    assert not (target / 'techquery.db').exists()
+
+
+def test_manage_release_restore_reports_detailed_error(source_library, tmp_path):
+    import subprocess, sys
+    database, documents = source_library
+    bundle = tmp_path / 'backup'
+    release.backup_data(database, documents, bundle)
+    target = tmp_path / 'non_empty_cli_target'
+    target.mkdir()
+    (target / 'existing.db').write_text('existing')
+    script = Path(__file__).resolve().parent.parent / 'manage_release.py'
+    res = subprocess.run([sys.executable, str(script), 'restore', '--bundle', str(bundle), '--target', str(target)],
+                         capture_output=True, text=True)
+    assert res.returncode == 2
+    assert '[manage_release:restore] Maintenance refused (ValueError):' in res.stderr
+    assert 'not empty' in res.stderr
+    assert 'no existing destination was replaced' in res.stderr
+
+
+
 def test_rate_limits_bound_clients_and_ignore_spoofed_forwarded_header(monkeypatch):
     monkeypatch.setattr(settings, 'ENVIRONMENT', 'production')
     monkeypatch.setattr(settings, 'RATE_LIMIT_AUTH_PER_MINUTE', 1)

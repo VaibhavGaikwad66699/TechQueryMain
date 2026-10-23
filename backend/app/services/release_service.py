@@ -210,12 +210,51 @@ def backup_data(database, documents, destination):
 
 def restore_bundle(bundle, destination):
     bundle, destination = Path(bundle).resolve(), Path(destination).resolve()
+    if destination == bundle or destination.is_relative_to(bundle) or bundle.is_relative_to(destination):
+        raise ValueError('Restore destination cannot be inside or enclose the bundle directory')
     manifest = verify_bundle(bundle)
-    with new_bundle(destination, [bundle]) as stage:
+    created_dest = False
+    if not destination.exists():
+        destination.mkdir(parents=True, exist_ok=True)
+        created_dest = True
+    elif not destination.is_dir():
+        raise ValueError(f"Destination '{destination}' is not a directory")
+    else:
+        # Destination already exists as a directory (e.g. /data in Docker or persistent volume mount).
+        # Ensure it does not contain existing data or documents; ignore standard mount artifacts like lost+found.
+        entries = [p for p in destination.iterdir() if p.name != 'lost+found']
+        stale_stages = [p for p in entries if p.name.startswith('.restore-stage-') and p.is_dir()]
+        non_stage_entries = [p for p in entries if not (p.name.startswith('.restore-stage-') and p.is_dir())]
+        if non_stage_entries:
+            raise ValueError(f"Destination directory '{destination}' is not empty; refusing to replace existing data")
+        for stale in stale_stages:
+            shutil.rmtree(stale, ignore_errors=True)
+
+    stage = Path(tempfile.mkdtemp(prefix='.restore-stage-', dir=destination))
+    try:
         for name in manifest['files']:
             target = stage / name
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(bundle / name, target)
         shutil.copyfile(bundle / 'manifest.json', stage / 'manifest.json')
         verify_bundle(stage)
+
+        # Staged files verified; publish them into destination
+        for item in list(stage.iterdir()):
+            target_path = destination / item.name
+            shutil.move(str(item), str(target_path))
+    except Exception:
+        if created_dest:
+            try:
+                shutil.rmtree(stage, ignore_errors=True)
+                destination.rmdir()
+            except OSError:
+                pass
+        raise
+    finally:
+        if stage.exists():
+            shutil.rmtree(stage, ignore_errors=True)
+
+    verify_bundle(destination)
     return manifest
+

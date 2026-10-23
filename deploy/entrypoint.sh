@@ -2,12 +2,17 @@
 set -e
 
 # First-time boot: restore the verified default library (C, C++, Java, Python) into /data if fresh
-if [ ! -f /data/techquery.db ] && [ -d /app/seed ]; then
+if [ -f /data/techquery.db ]; then
+    echo "[Entrypoint] Existing database detected at /data/techquery.db; skipping default library restore."
+elif [ -d /app/seed ]; then
     echo "[Entrypoint] Fresh container or persistent disk detected."
     echo "[Entrypoint] Restoring verified 4-book default library (C, C++, Java, Python)..."
     python manage_release.py restore --bundle /app/seed --target /data
     echo "[Entrypoint] Default library restored successfully into /data."
+else
+    echo "[Entrypoint] Notice: /app/seed directory not present; skipping default library restore."
 fi
+
 
 # Fallback to port 8000 if Render or the environment did not set PORT
 PORT="${PORT:-8000}"

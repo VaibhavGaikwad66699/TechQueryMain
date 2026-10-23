@@ -1,0 +1,216 @@
+{
+  "checked_at": "2026-10-23T15:08:50.793733+00:00",
+  "status": "ready_for_user_local_review_not_public_deployment",
+  "docker": {
+    "available": false,
+    "image_build_verified": false,
+    "compose_execution_verified": false,
+    "non_root_uid_and_volume_permissions_verified": false,
+    "caddy_execution_verified": false,
+    "real_https_verified": false,
+    "reason": "No Docker/Podman/Caddy runtime, standard Docker executable or Docker engine pipe found; none installed."
+  },
+  "deployment_configuration_static_review": {
+    "yaml_parsed": true,
+    "app_port_unpublished": true,
+    "app_read_only": true,
+    "single_non_root_worker_configured": true,
+    "persistent_data_and_backups_configured": true,
+    "secrets_outside_image_context": true,
+    "limitation": "Static review only; does not validate Docker build, image bytes or Linux UID/permissions."
+  },
+  "production_http": {
+    "provider_calls": 0,
+    "live_data_mutated": false,
+    "network_scope": "127.0.0.1 only",
+    "proxy_execution": "unavailable; exact Caddy security headers simulated by QA ASGI middleware",
+    "checks": {
+      "built_frontend_assets": true,
+      "no_source_or_secret_static_routes": true,
+      "host_filter": true,
+      "docs_disabled": true,
+      "production_cors": true,
+      "defaults_and_head": true,
+      "private_upload_processing_and_ranges": true,
+      "normal_users_never_admin": true,
+      "default_protection": true,
+      "owner_scoped_query_history": true,
+      "oversized_body_rejected": true,
+      "integrated_auth_rate_limit": true,
+      "live_maintenance_refused": true,
+      "backup_restore_restart_persistence": true,
+      "offline_admin_promotion": true,
+      "admin_cannot_access_private_books": true
+    },
+    "passed": true
+  },
+  "backend_tests": {
+    "tests": 223,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "frontend": {
+    "client_tests_passed": 12,
+    "production_build_passed": true,
+    "vite_version": "6.4.4",
+    "browser": "Chrome extension; disposable loopback production build",
+    "account_switch_failed_refresh_verified": true,
+    "guest_refresh_recovered_to_four_books": true,
+    "configured_csp_simulation_frontend_rendered": true,
+    "fresh_blob_pdf_visual_inspection": "blocked by browser URL policy; no bypass attempted",
+    "prior_pdf_evidence_reviewed": "Existing screenshot confirms rendering of a one-page synthetic PDF; not a fresh proxy/non-first-page test.",
+    "physical_devices_tested": false
+  },
+  "dependencies": {
+    "python": {
+      "source": "OSV public advisory API",
+      "packages_checked": 50,
+      "results_count": 50,
+      "findings": [],
+      "complete": true
+    },
+    "python_lock_matches_installed": true,
+    "pip_check_passed": true,
+    "certifi_fixed_version": "2026.10.19",
+    "npm_runtime": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "npm_all": {
+      "info": 0,
+      "low": 0,
+      "moderate": 3,
+      "high": 0,
+      "critical": 0,
+      "total": 3
+    },
+    "selector_parser_installed": "6.1.5",
+    "remaining": "Three moderate dev/build-only selector-parser/Tailwind-chain audit findings remain. Installed 6.1.5 is a patched 6.x release according to the maintainer; npm advisory uses a broader affected range. No untrusted CSS parsing route or forced Tailwind major upgrade.",
+    "selector_parser_maintainer_advisory": "https://github.com/postcss/postcss-selector-parser/security/advisories/GHSA-rj75-hqrm-r3gf",
+    "image_os_advisory_scan_completed": false
+  },
+  "bundles": {
+    "private-backup": {
+      "conversations": 3,
+      "document_chunks": 9320,
+      "documents": 4,
+      "extraction_checkpoints": 0,
+      "extraction_pages": 0,
+      "messages": 10,
+      "user_preferences": 3,
+      "user_subjects": 0,
+      "users": 3,
+      "stored_embeddings": 4681
+    },
+    "private-restore": {
+      "conversations": 3,
+      "document_chunks": 9320,
+      "documents": 4,
+      "extraction_checkpoints": 0,
+      "extraction_pages": 0,
+      "messages": 10,
+      "user_preferences": 3,
+      "user_subjects": 0,
+      "users": 3,
+      "stored_embeddings": 4681
+    },
+    "default-library": {
+      "conversations": 0,
+      "document_chunks": 9320,
+      "documents": 4,
+      "extraction_checkpoints": 0,
+      "extraction_pages": 0,
+      "messages": 0,
+      "user_preferences": 0,
+      "user_subjects": 0,
+      "users": 0,
+      "stored_embeddings": 4681
+    }
+  },
+  "preservation": {
+    "users": {
+      "rows": 3,
+      "all_fields_identical": true
+    },
+    "user_preferences": {
+      "rows": 3,
+      "all_fields_identical": true
+    },
+    "documents": {
+      "rows": 4,
+      "all_fields_identical": true
+    },
+    "conversations": {
+      "rows": 3,
+      "all_fields_identical": true
+    },
+    "document_chunks": {
+      "rows": 9320,
+      "all_fields_identical": true
+    },
+    "messages": {
+      "rows": 10,
+      "all_fields_identical": true
+    },
+    "user_subjects": {
+      "rows": 0,
+      "all_fields_identical": true
+    },
+    "library_migrations": {
+      "rows": 1,
+      "all_fields_identical": true
+    },
+    "extraction_checkpoints": {
+      "rows": 0,
+      "all_fields_identical": true
+    },
+    "extraction_pages": {
+      "rows": 0,
+      "all_fields_identical": true
+    }
+  },
+  "pdfs": [
+    {
+      "subject": "Java",
+      "stored_preserved": true,
+      "source_preserved": true
+    },
+    {
+      "subject": "C",
+      "stored_preserved": true,
+      "source_preserved": true
+    },
+    {
+      "subject": "C++",
+      "stored_preserved": true,
+      "source_preserved": true
+    },
+    {
+      "subject": "Python",
+      "stored_preserved": true,
+      "source_preserved": true
+    }
+  ],
+  "all_real_data_preserved": true,
+  "index": {
+    "chunks": 9320,
+    "compatible_embeddings": 4681,
+    "missing_embeddings": 4639,
+    "modified": false
+  },
+  "original_local_services_restored": {
+    "api_ready": true,
+    "frontend_served": true,
+    "loopback_only": true
+  },
+  "google_calls": 0,
+  "aws_s3_provisioning_or_deployment": false,
+  "test_harness_notes": [
+    "A package install was initially run from the root; verified only the newly created root package files/node_modules were removed, then the update was applied in frontend. Original frontend manifests were saved first."
+  ]
+}

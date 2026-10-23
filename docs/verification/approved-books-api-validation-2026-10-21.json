@@ -1,0 +1,155 @@
+{
+  "generation_model": "gemini-3.5-flash-lite",
+  "cases": [
+    {
+      "id": "c_memory",
+      "language": "C",
+      "question": "How do malloc and free manage dynamically allocated memory in C?",
+      "response_mode": "generated",
+      "abstained": false,
+      "retrieval_mode": "hybrid",
+      "elapsed_seconds": 5.612,
+      "sources": [
+        {
+          "document_id": 5,
+          "pdf_page": 268,
+          "chunk_index": 902
+        },
+        {
+          "document_id": 5,
+          "pdf_page": 267,
+          "chunk_index": 895
+        },
+        {
+          "document_id": 5,
+          "pdf_page": 267,
+          "chunk_index": 897
+        },
+        {
+          "document_id": 5,
+          "pdf_page": 267,
+          "chunk_index": 896
+        }
+      ],
+      "language_isolation_passed": true,
+      "expected_page_hit": true,
+      "generation_passed": true,
+      "permission_notice_absent": true
+    },
+    {
+      "id": "cpp_raii",
+      "language": "C++",
+      "question": "How does RAII use constructors and destructors for resource management in C++?",
+      "response_mode": "abstained",
+      "abstained": true,
+      "retrieval_mode": "hybrid",
+      "elapsed_seconds": 3.533,
+      "sources": [
+        {
+          "document_id": 6,
+          "pdf_page": 651,
+          "chunk_index": 2162
+        },
+        {
+          "document_id": 6,
+          "pdf_page": 651,
+          "chunk_index": 2163
+        },
+        {
+          "document_id": 6,
+          "pdf_page": 652,
+          "chunk_index": 2166
+        },
+        {
+          "document_id": 6,
+          "pdf_page": 651,
+          "chunk_index": 2164
+        }
+      ],
+      "language_isolation_passed": true,
+      "expected_page_hit": true,
+      "generation_passed": false,
+      "permission_notice_absent": true
+    },
+    {
+      "id": "python_tuples",
+      "language": "Python",
+      "question": "What is the difference between lists and tuples in Python?",
+      "response_mode": "generated",
+      "abstained": false,
+      "retrieval_mode": "hybrid",
+      "elapsed_seconds": 3.89,
+      "sources": [
+        {
+          "document_id": 7,
+          "pdf_page": 186,
+          "chunk_index": 730
+        }
+      ],
+      "language_isolation_passed": true,
+      "expected_page_hit": true,
+      "generation_passed": true,
+      "permission_notice_absent": true
+    },
+    {
+      "id": "java_strings",
+      "language": "Java",
+      "question": "Do String.toUpperCase and String.toLowerCase change the original String?",
+      "response_mode": "generated",
+      "abstained": false,
+      "retrieval_mode": "hybrid",
+      "elapsed_seconds": 5.38,
+      "sources": [
+        {
+          "document_id": 4,
+          "pdf_page": 77,
+          "chunk_index": 467
+        },
+        {
+          "document_id": 4,
+          "pdf_page": 77,
+          "chunk_index": 468
+        }
+      ],
+      "language_isolation_passed": true,
+      "expected_page_hit": true,
+      "generation_passed": true,
+      "permission_notice_absent": true
+    }
+  ],
+  "negative_cases": [
+    {
+      "language": "C",
+      "question": "What is the orbital period of Neptune?",
+      "abstained": true,
+      "response_mode": "abstained",
+      "suggestions_empty": true,
+      "elapsed_seconds": 0.679
+    },
+    {
+      "language": "C++",
+      "question": "What is the orbital period of Neptune?",
+      "abstained": true,
+      "response_mode": "abstained",
+      "suggestions_empty": true,
+      "elapsed_seconds": 1.006
+    },
+    {
+      "language": "Python",
+      "question": "What is the orbital period of Neptune?",
+      "abstained": true,
+      "response_mode": "abstained",
+      "suggestions_empty": true,
+      "elapsed_seconds": 1.022
+    }
+  ],
+  "limitation": "Small live smoke, not universal answer correctness or full semantic coverage. Index grows during this run.",
+  "unsupported_language": {
+    "abstained": true,
+    "suggestions_empty": true,
+    "scope_notice": true
+  },
+  "supported_generated": 3,
+  "supported_total": 4,
+  "negative_passed": 3
+}

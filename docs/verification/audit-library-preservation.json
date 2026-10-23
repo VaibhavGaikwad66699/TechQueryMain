@@ -1,0 +1,8 @@
+{
+  "result": "passed",
+  "original_documents_preserved": 4,
+  "original_chunk_rows_identical": 3330,
+  "pdf_files_exist_with_original_sizes": 4,
+  "pdf_fingerprints_verified_against_saved_metadata": 1,
+  "scope": "read-only comparison against pre-Day-1 SQLite backup; no provider calls"
+}

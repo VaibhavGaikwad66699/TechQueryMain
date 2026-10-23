@@ -1,0 +1,15 @@
+# TechQuery frontend acceptance handoff
+
+Backend answer-quality work is recorded in `docs/ANSWER_QUALITY_REVIEW.md`. Read it and current `PROJECT_STATUS.md` first. **No new frontend defect was confirmed during this backend task; the items below require browser verification, not a speculative redesign.**
+
+Work only on confirmed frontend findings. Use disposable accounts/PDFs for mutations; preserve all real data, source PDFs and vectors. Keep API behavior/ownership boundaries and the current design. Do not run embedding backfills, change models/keys/billing, integrate S3, provision resources or deploy.
+
+1. Start the existing local frontend/backend on loopback if needed; no normal API process was running at the last backend check. Use permitted browser tools. If Work browser access is disabled, report the gate and stop browser-dependent checks without bypassing it.
+2. Check widths **320, 375, 768, 1024 and 1440px**, including short screens. Record the tested browser and distinguish emulation from actual phones/Safari/Firefox.
+3. Verify registration/login/logout, four defaults per account, private subjects, upload/process/resume/errors, preferences, chat, history, deletion confirm/cancel and user isolation. Use synthetic references; do not send a real private PDF to an external provider without its authorization.
+4. Verify generated, source-excerpt and abstained messages have clear labels. Test that **Source note:** paragraphs remain readable, wrap without overflow, copy with the answer and survive conversation/history rendering. Current backend cautions explain the reviewed Java allocation and introductory Python tuple-source exclusions. Do not hide them or remove backend guards.
+5. Try the original Java case-conversion and Python list/tuple questions, a one-item tuple syntax question and C++ constructors/destructors. Confirm answer/source cards are usable. Record backend answer issues with exact question/preferences/mode/source pages for Codex; do not claim correctness from a generated badge alone. Avoid repeatedly consuming quota if a provider fails.
+6. Open a cited PDF and verify actual rendering and the physical page jump, including authenticated personal PDFs and popup/new-tab behavior. Original PDFs intentionally retain the reviewed wording; the source note explains this. Other users/guests must not download personal PDFs.
+7. Check focus, accessible labels, keyboard navigation, touch targets, zoom, long answers/code/filenames, loading/empty/error states, chat scrolling and mobile input visibility. Fix only reproduced UI issues and run relevant frontend tests/build.
+
+Deliver `docs/FRONTEND_ACCEPTANCE_REPORT.md` with actual tested screens/browsers, screenshots where permitted, precise changes, backend follow-ups and unresolved gates. Update `PROJECT_STATUS.md`. Stop for the user's project review; do not proceed automatically to AWS/S3 or public deployment.

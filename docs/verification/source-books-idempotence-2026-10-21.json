@@ -1,0 +1,47 @@
+{
+  "mode": "apply_local_only",
+  "books": [
+    {
+      "action": "preserved_existing",
+      "document_id": 5,
+      "language": "C",
+      "title": "C Notes for Professionals",
+      "source_sha256": "4d9133ac6d74b412f2484aca91c482ca66b8d46ed7f94a317740fa34cebd9b36",
+      "total_pages": 342,
+      "total_chunks": 1124,
+      "no_provider_calls": true
+    },
+    {
+      "action": "preserved_existing",
+      "document_id": 6,
+      "language": "C++",
+      "title": "C++ Notes for Professionals",
+      "source_sha256": "7b53f43eae83ef1260f02f6a492fdda498e71e4dff81b7b9306652d5d4e65918",
+      "total_pages": 708,
+      "total_chunks": 2323,
+      "no_provider_calls": true
+    },
+    {
+      "action": "preserved_existing",
+      "document_id": 4,
+      "language": "Java",
+      "title": "javaNotesForProfessionals",
+      "source_sha256": "8751bee1658e8b2a247311eb9179625a4216b62f76d4b21545fb68e495dba706",
+      "total_pages": 982,
+      "total_chunks": 3318,
+      "no_provider_calls": true
+    },
+    {
+      "action": "preserved_existing",
+      "document_id": 7,
+      "language": "Python",
+      "title": "Python Notes for Professionals",
+      "source_sha256": "f5e2868ad977858fa0fa3eb123282f15a06f6eb4dd2b7c3a883e1dd1e138f61f",
+      "total_pages": 856,
+      "total_chunks": 2555,
+      "no_provider_calls": true
+    }
+  ],
+  "no_provider_calls": true,
+  "elapsed_seconds": 0.098
+}

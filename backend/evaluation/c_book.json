@@ -1,0 +1,25 @@
+{
+  "book_title": "C Notes for Professionals",
+  "cases": [
+    {
+      "id": "c_memory_release",
+      "question": "How do malloc and free manage dynamically allocated memory in C?",
+      "pages": [
+        267,
+        268
+      ],
+      "evidence_terms": [
+        "free",
+        "memory"
+      ],
+      "expected_fact": "malloc allocates dynamic storage; free releases an allocated block."
+    },
+    {
+      "id": "c_unsupported_astronomy",
+      "question": "What is the orbital period of Neptune?",
+      "pages": [],
+      "evidence_terms": [],
+      "expected_fact": "Abstain."
+    }
+  ]
+}

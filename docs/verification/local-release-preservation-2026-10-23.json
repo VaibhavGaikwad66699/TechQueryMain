@@ -1,0 +1,73 @@
+{
+  "tables": {
+    "users": {
+      "rows": 3,
+      "all_fields_identical": true
+    },
+    "user_preferences": {
+      "rows": 3,
+      "all_fields_identical": true
+    },
+    "documents": {
+      "rows": 4,
+      "all_fields_identical": true
+    },
+    "conversations": {
+      "rows": 3,
+      "all_fields_identical": true
+    },
+    "document_chunks": {
+      "rows": 9320,
+      "all_fields_identical": true
+    },
+    "messages": {
+      "rows": 10,
+      "all_fields_identical": true
+    },
+    "user_subjects": {
+      "rows": 0,
+      "all_fields_identical": true
+    },
+    "library_migrations": {
+      "rows": 1,
+      "all_fields_identical": true
+    },
+    "extraction_checkpoints": {
+      "rows": 0,
+      "all_fields_identical": true
+    },
+    "extraction_pages": {
+      "rows": 0,
+      "all_fields_identical": true
+    }
+  },
+  "pdfs": [
+    {
+      "subject": "Java",
+      "stored_preserved": true,
+      "source_preserved": true
+    },
+    {
+      "subject": "C",
+      "stored_preserved": true,
+      "source_preserved": true
+    },
+    {
+      "subject": "C++",
+      "stored_preserved": true,
+      "source_preserved": true
+    },
+    {
+      "subject": "Python",
+      "stored_preserved": true,
+      "source_preserved": true
+    }
+  ],
+  "all_real_data_preserved": true,
+  "index": {
+    "chunks": 9320,
+    "compatible_embeddings": 4681,
+    "missing_embeddings": 4639,
+    "modified": false
+  }
+}

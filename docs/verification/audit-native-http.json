@@ -1,0 +1,14 @@
+{
+  "scope": "isolated real HTTP; self-authored 2-page PDF; no Gemini calls",
+  "controlled_extraction_delay_seconds": 3,
+  "upload_response_seconds": 0.041,
+  "processing_completed": true,
+  "pages": 2,
+  "chunks": 2,
+  "readiness_during_processing": true,
+  "exact_inline_pdf_download": true,
+  "abstention_without_suggestions": true,
+  "sanitized_validation": true,
+  "disposable_document_deleted": true,
+  "result": "passed"
+}

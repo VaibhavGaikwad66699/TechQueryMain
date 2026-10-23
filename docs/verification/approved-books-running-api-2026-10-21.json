@@ -1,0 +1,18 @@
+{
+  "api_ready": true,
+  "all_four_books_google_enabled": true,
+  "active_index_jobs": false,
+  "total_compatible_embeddings_real_books": 2866,
+  "remaining_compatible_embeddings_real_books": 6454,
+  "post_bulk_quota_python_query": {
+    "response_mode": "generated",
+    "retrieval_mode": "hybrid",
+    "elapsed_seconds": 4.123,
+    "pdf_pages": [
+      186
+    ]
+  },
+  "generation_model": "gemini-3.5-flash-lite",
+  "billing_changed": false,
+  "limitation": "A rejected 16-text batch does not establish that all single-query embedding allowance is exhausted."
+}

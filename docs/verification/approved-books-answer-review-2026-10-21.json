@@ -1,0 +1,46 @@
+{
+  "review_type": "manual source/answer review of a small live smoke",
+  "main_run": {
+    "supported_cases": 4,
+    "generated": 3,
+    "abstained": 1,
+    "faithful_supported_generated_cases": [
+      "c_memory",
+      "python_tuples",
+      "java_strings"
+    ],
+    "cpp_compound_question": "Abstained: retrieved RAII evidence did not explicitly cover the requested constructors/destructors explanation. Do not overwrite this initial result with the follow-up."
+  },
+  "cpp_followups": [
+    {
+      "question": "What does RAII stand for in C++, and how does it manage resources?",
+      "generated": true,
+      "source_faithful": true,
+      "answers_requested_concept": true,
+      "pdf_pages": [
+        651
+      ]
+    },
+    {
+      "question": "How do constructors and destructors work in C++?",
+      "generated": true,
+      "source_faithful": true,
+      "answers_requested_concept": false,
+      "finding": "Returned facts about virtual calls and function-try-block edge cases rather than the general initialization/destruction explanation. Retrieval relevance and answer completeness require improvement.",
+      "pdf_pages": [
+        234,
+        396
+      ]
+    }
+  ],
+  "negative_checks": {
+    "astronomy_abstentions": 3,
+    "unsupported_language_abstention": true
+  },
+  "limitations": [
+    "Not a broad accuracy or completeness guarantee.",
+    "Index coverage increased during checks; model/ranking comparisons are not controlled.",
+    "Historical C++ and Python examples require version-aware QA.",
+    "No retrieval threshold or ranking was tuned to these cases."
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "mode": "semantic",
+  "dataset": "python_book.json",
+  "generation_model": null,
+  "generation_timeout_ms": null,
+  "cases": [
+    {
+      "id": "python_tuple_immutability",
+      "question": "What is the difference between lists and tuples in Python?",
+      "expected_fact": "Tuples are immutable sequences; item assignment is not allowed, although contained mutable objects can change.",
+      "retrieval_pass": true,
+      "citation_metadata_valid": true,
+      "original_pdf_page_verified": true,
+      "page_verification_methods": [
+        "pypdf_exact_normalized",
+        "pypdf_exact_normalized",
+        "fresh_pdftotext_exact_normalized",
+        "fresh_pdftotext_exact_normalized"
+      ],
+      "pages": [
+        186,
+        186,
+        186,
+        187
+      ],
+      "methods": [
+        "semantic",
+        "semantic",
+        "semantic",
+        "semantic"
+      ],
+      "scores": [
+        0.7253,
+        0.7106,
+        0.7029,
+        0.6637
+      ]
+    },
+    {
+      "id": "python_unsupported_astronomy",
+      "question": "What is the orbital period of Neptune?",
+      "expected_fact": "Abstain.",
+      "retrieval_pass": true,
+      "citation_metadata_valid": true,
+      "original_pdf_page_verified": true,
+      "page_verification_methods": [],
+      "pages": [],
+      "methods": [],
+      "scores": []
+    }
+  ],
+  "limitations": "Small release smoke set. Citation/page checks do not establish claim faithfulness. Human review of generated answers is required.",
+  "coverage": {
+    "total_chunks": 2555,
+    "embedded_chunks": 101,
+    "missing_embeddings": 2454,
+    "unverified_embeddings": 0,
+    "legacy_text_chunks": 0,
+    "embedding_model": "gemini-embedding-001",
+    "embedding_dimensions": 768,
+    "provider_use_allowed": true,
+    "semantic_ready": false
+  },
+  "scope": {
+    "type": "sampled_pages",
+    "pages": [
+      186,
+      187
+    ],
+    "chunks": 5,
+    "note": "Live pipeline smoke test only; not a full-book retrieval result"
+  },
+  "retrieval_passed": 2,
+  "total": 2
+}

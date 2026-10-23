@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-21",
+  "browser": "Codex in-app Chromium browser",
+  "url": "http://localhost:5173/",
+  "desktop_language_options": ["All languages", "C", "C++", "Java", "Python"],
+  "welcome_examples_cover_four_languages": true,
+  "inclusive_user_wording_verified": true,
+  "preferences_language_options_verified": true,
+  "retained_outside_scope_pdf_labels_verified": 2,
+  "retained_pdf_process_controls_disabled": true,
+  "unindexed_python_question_abstained": true,
+  "mobile": {
+    "width": 375,
+    "height": 667,
+    "document_scroll_width": 375,
+    "question_input_visible": true,
+    "language_menu_available": true
+  },
+  "viewport_override_reset": true,
+  "limitations": "Incremental browser check. Physical devices, Safari/Firefox, mobile keyboards and actual PDF viewer/page jump remain unverified. No new books were imported and no Google requests were needed."
+}

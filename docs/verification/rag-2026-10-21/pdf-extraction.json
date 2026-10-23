@@ -1,0 +1,28 @@
+{
+  "scope": "Extraction only, no database writes or Gemini requests",
+  "cases": [
+    {
+      "result": "passed",
+      "total_pdf_pages": 500,
+      "extracted_pages": 500,
+      "chunks": 1500,
+      "extraction_seconds": 1.647,
+      "peak_memory_bytes": null,
+      "memory_note": "Peak memory was not measured.",
+      "case": "synthetic_500_pages",
+      "file_bytes": 889986
+    },
+    {
+      "result": "passed",
+      "total_pdf_pages": 982,
+      "extracted_pages": 4,
+      "chunks": 17,
+      "extraction_seconds": 7.197,
+      "peak_memory_bytes": null,
+      "memory_note": "Peak memory was not measured.",
+      "case": "real_java_sample_only",
+      "file_bytes": 7386481
+    }
+  ],
+  "limitations": "Synthetic 500-page PDF and optional four-page real sample. Full 982-page extraction and peak memory remain unverified."
+}

@@ -1,0 +1,71 @@
+{
+  "mode": "semantic",
+  "dataset": "c_book.json",
+  "generation_model": null,
+  "generation_timeout_ms": null,
+  "cases": [
+    {
+      "id": "c_memory_release",
+      "question": "How do malloc and free manage dynamically allocated memory in C?",
+      "expected_fact": "malloc allocates dynamic storage; free releases an allocated block.",
+      "retrieval_pass": true,
+      "citation_metadata_valid": false,
+      "original_pdf_page_verified": false,
+      "pages": [
+        267,
+        268,
+        267,
+        267,
+        267
+      ],
+      "methods": [
+        "semantic",
+        "semantic",
+        "semantic",
+        "semantic",
+        "semantic"
+      ],
+      "scores": [
+        0.7215,
+        0.7205,
+        0.7179,
+        0.7161,
+        0.6748
+      ]
+    },
+    {
+      "id": "c_unsupported_astronomy",
+      "question": "What is the orbital period of Neptune?",
+      "expected_fact": "Abstain.",
+      "retrieval_pass": true,
+      "citation_metadata_valid": true,
+      "original_pdf_page_verified": true,
+      "pages": [],
+      "methods": [],
+      "scores": []
+    }
+  ],
+  "limitations": "Small release smoke set. Citation/page checks do not establish claim faithfulness. Human review of generated answers is required.",
+  "coverage": {
+    "total_chunks": 1124,
+    "embedded_chunks": 57,
+    "missing_embeddings": 1067,
+    "unverified_embeddings": 0,
+    "legacy_text_chunks": 0,
+    "embedding_model": "gemini-embedding-001",
+    "embedding_dimensions": 768,
+    "provider_use_allowed": true,
+    "semantic_ready": false
+  },
+  "scope": {
+    "type": "sampled_pages",
+    "pages": [
+      267,
+      268
+    ],
+    "chunks": 9,
+    "note": "Live pipeline smoke test only; not a full-book retrieval result"
+  },
+  "retrieval_passed": 2,
+  "total": 2
+}

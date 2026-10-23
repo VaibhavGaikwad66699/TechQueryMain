@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-20",
+  "backend_tests": {
+    "passed": 36,
+    "command": "python -m pytest -q",
+    "environment": "Outside managed Windows socket restriction; offline provider, isolated database/storage"
+  },
+  "frontend_build": "passed",
+  "dependency_check": "passed",
+  "live_local_app": {
+    "frontend": "http://localhost:5173",
+    "frontend_http": 200,
+    "api_model": "gemini-3.1-flash-lite",
+    "proxy_to_updated_api": "passed",
+    "autoboxing_question": "generated answer with verified PDF page 545 citation",
+    "unsupported_question": "abstained with zero sources",
+    "local_cors": "passed"
+  },
+  "lexical_full_book": {
+    "passed": 12,
+    "total": 12,
+    "original_pdf_pages_verified": true
+  },
+  "semantic_sampled_pages": {
+    "scope": {
+      "type": "sampled_pages",
+      "pages": [
+        30,
+        34,
+        40,
+        50,
+        93,
+        94,
+        373,
+        493,
+        494,
+        497,
+        545,
+        546
+      ],
+      "chunks": 40,
+      "note": "Live pipeline smoke test only; not a full-book retrieval result"
+    },
+    "retrieval_passed": 12,
+    "total": 12,
+    "original_pdf_pages_verified": true,
+    "supported_answers_generated": 7,
+    "unsupported_abstentions": 4,
+    "main_run_generation_gate_passed": false,
+    "failure": "null_unboxing returned excerpts after provider 504; preserved separately from retry"
+  },
+  "targeted_retry": {
+    "id": "null_unboxing",
+    "generation_pass": true,
+    "mode": "generated"
+  },
+  "limitations": [
+    "12-case smoke set; semantic scope is sampled pages, not full-book retrieval",
+    "Threshold selected on smoke set; held-out release evaluation is still required",
+    "Legacy extraction snapshot reused; new full extraction was not completed",
+    "Intermittent provider/network errors occurred; latency and reliability release thresholds unmeasured",
+    "Full-book semantic coverage remains incomplete until backfill finishes"
+  ],
+  "embedding_backfill": {
+    "document_id": 4,
+    "compatible": 924,
+    "total": 3318,
+    "remaining": 2394,
+    "status": "partial",
+    "stopped_reason": "Google 429 RESOURCE_EXHAUSTED; free-tier requests per day 1000",
+    "quota_id": "EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier",
+    "job_running": false
+  }
+}

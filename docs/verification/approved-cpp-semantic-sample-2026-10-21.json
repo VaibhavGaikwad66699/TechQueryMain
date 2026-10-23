@@ -1,0 +1,68 @@
+{
+  "mode": "semantic",
+  "dataset": "cpp_book.json",
+  "generation_model": null,
+  "generation_timeout_ms": null,
+  "cases": [
+    {
+      "id": "cpp_raii",
+      "question": "How does RAII use constructors and destructors for resource management in C++?",
+      "expected_fact": "RAII means Resource Acquisition Is Initialization and uses object lifetime/ownership to manage resources.",
+      "retrieval_pass": true,
+      "citation_metadata_valid": true,
+      "original_pdf_page_verified": true,
+      "pages": [
+        651,
+        651,
+        652,
+        651
+      ],
+      "methods": [
+        "semantic",
+        "semantic",
+        "semantic",
+        "semantic"
+      ],
+      "scores": [
+        0.7305,
+        0.6916,
+        0.6563,
+        0.6523
+      ]
+    },
+    {
+      "id": "cpp_unsupported_astronomy",
+      "question": "What is the orbital period of Neptune?",
+      "expected_fact": "Abstain.",
+      "retrieval_pass": true,
+      "citation_metadata_valid": true,
+      "original_pdf_page_verified": true,
+      "pages": [],
+      "methods": [],
+      "scores": []
+    }
+  ],
+  "limitations": "Small release smoke set. Citation/page checks do not establish claim faithfulness. Human review of generated answers is required.",
+  "coverage": {
+    "total_chunks": 2323,
+    "embedded_chunks": 56,
+    "missing_embeddings": 2267,
+    "unverified_embeddings": 0,
+    "legacy_text_chunks": 0,
+    "embedding_model": "gemini-embedding-001",
+    "embedding_dimensions": 768,
+    "provider_use_allowed": true,
+    "semantic_ready": false
+  },
+  "scope": {
+    "type": "sampled_pages",
+    "pages": [
+      651,
+      652
+    ],
+    "chunks": 8,
+    "note": "Live pipeline smoke test only; not a full-book retrieval result"
+  },
+  "retrieval_passed": 2,
+  "total": 2
+}

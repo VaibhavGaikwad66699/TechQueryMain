@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #fbf6ee;
+    color: #3f322c;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  @media (max-width: 767px) {
+    /* Keep form focus readable and avoid automatic input zoom on iOS. */
+    input[type='text'], input[type='email'], input[type='password'], select[class], textarea[class] {
+      font-size: 16px;
+    }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1e7d8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9b39e;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aa8973;
+}

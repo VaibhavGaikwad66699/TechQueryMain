@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-21",
+  "browser": "Codex in-app Chromium",
+  "question": "What does RAII stand for in C++, and how does it manage resources?",
+  "language": "C++",
+  "answer_style": "Concise",
+  "examples": false,
+  "response_label": "Generated answer",
+  "retrieval_label": "Combined search",
+  "cited_document_id": 6,
+  "cited_physical_page": 651,
+  "source_link": "/api/v1/documents/6/download#page=651",
+  "permission_notice_absent": true,
+  "screenshot": "approved-books-cpp-generated-2026-10-21.png",
+  "limitations": "One supported guest question; no physical-device or PDF-viewer acceptance claim. The general constructor/destructor answer-completeness failure remains recorded separately."
+}

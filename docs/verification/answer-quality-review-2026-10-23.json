@@ -1,0 +1,88 @@
+{
+  "checked_at": "2026-10-23T12:51:58.928098+00:00",
+  "status": "targeted_fixes_verified_local_acceptance_still_pending",
+  "backend_tests": {
+    "tests": 222,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "index": {
+    "total_chunks": 9320,
+    "compatible_embeddings": 4681,
+    "missing_embeddings": 4639,
+    "index_modified": false
+  },
+  "all_saved_data_preserved": true,
+  "offline_retrieval": {
+    "cases": 52,
+    "original_page_checks": 190,
+    "verified_page_checks": 190,
+    "note": "Page identity/supporting-source provenance checks, not answer-accuracy scores."
+  },
+  "live_generation": {
+    "total_observations": 19,
+    "unique_questions_latest": 14,
+    "generated_latest": 10,
+    "abstained_latest": [
+      "quality_cpp_order",
+      "quality_cpp23",
+      "quality_python_new_version",
+      "quality_unknown"
+    ],
+    "fallbacks_latest": 0,
+    "latest_original_page_checks": 26,
+    "all_latest_pages_verified": true,
+    "initial_failures_retained": [
+      "Initial Python notation retrieval miss; fixed by clause retrieval.",
+      "Original broad Python comparison repeated simplified parentheses wording; fixed by scoped source exclusion.",
+      "Generated comma-alone shorthand triggered a bounded precision repair; latest answer states an item followed by a comma."
+    ],
+    "question_embeddings_requested": false,
+    "indexing_requested": false,
+    "semantic_live_retrieval_verified": false,
+    "limitation": "Bounded lexical-plus-generation sample; no general semantic entailment checker or universal answer-accuracy claim."
+  },
+  "private_references": {
+    "data": "isolated synthetic fixtures only",
+    "owner_scope_tested": true,
+    "guest_and_foreign_generation_rejection_tested": true
+  },
+  "source_review": {
+    "java": {
+      "physical_pages": [
+        77,
+        747
+      ],
+      "finding": "Page 77 overstates allocation; page 747 explicitly qualifies toUpperCase with possible reuse."
+    },
+    "python": {
+      "physical_pages": [
+        42,
+        59,
+        185,
+        186,
+        187
+      ],
+      "finding": "Page 59 has simplified notation and a faulty singleton example; scoped generation exclusions retain stored text. Detailed section covers commas, grouping and nested mutability."
+    },
+    "cpp_member_order": {
+      "physical_pages_scanned": 708,
+      "related_pages": [
+        240,
+        246,
+        517,
+        616,
+        617,
+        682
+      ],
+      "classification": "direct_source_support_unconfirmed",
+      "finding": "Object layout, global initialization and a partial-construction example do not establish the general declaration-order rule."
+    }
+  },
+  "frontend_code_changed": false,
+  "browser_visual_acceptance_completed": false,
+  "local_api_was_running_at_final_check": false,
+  "aws_s3_deployment_changed": false,
+  "model_key_billing_changed": false
+}

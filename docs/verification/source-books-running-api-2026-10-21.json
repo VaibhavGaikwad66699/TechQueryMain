@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "api_ready": true,
+  "frontend_proxy_verified": true,
+  "library_records": 7,
+  "library_chunks": 9332,
+  "java_compatible_embeddings": 1900,
+  "new_compatible_embeddings": 0,
+  "new_books_provider_use_blocked": true,
+  "new_inline_pdf_bytes_verified": 3,
+  "generation_key_configured_on_server": true,
+  "cases": [
+    {
+      "language": "C",
+      "document_id": 5,
+      "top_pdf_page": 268,
+      "response_mode": "source_excerpts",
+      "permission_notice": true,
+      "elapsed_seconds": 0.25
+    },
+    {
+      "language": "C++",
+      "document_id": 6,
+      "top_pdf_page": 651,
+      "response_mode": "source_excerpts",
+      "permission_notice": true,
+      "elapsed_seconds": 0.393
+    },
+    {
+      "language": "Python",
+      "document_id": 7,
+      "top_pdf_page": 186,
+      "response_mode": "source_excerpts",
+      "permission_notice": true,
+      "elapsed_seconds": 0.4
+    }
+  ],
+  "no_provider_calls_needed": true,
+  "limitation": "Local passage mode only; generated answers and full semantic search for the new books await permission and quota."
+}

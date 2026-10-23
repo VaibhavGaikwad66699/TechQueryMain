@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "original_documents_unchanged": 4,
+  "original_chunk_rows_including_embeddings_and_metadata_unchanged": 3330,
+  "java_embedding_rows_unchanged": 3318,
+  "source_books_unchanged": 4,
+  "new_documents": 3,
+  "new_local_only_chunks": 6002,
+  "new_pages": 1906,
+  "library_documents": 7,
+  "library_chunks": 9332,
+  "no_provider_calls": true
+}

@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-21",
+  "starting_compatible_embeddings": 924,
+  "added_compatible_embeddings": 976,
+  "ending_index": {
+    "id": 4,
+    "title": "javaNotesForProfessionals",
+    "status": "partial",
+    "total_chunks": 3318,
+    "embedded_chunks": 1900,
+    "missing_embeddings": 1418,
+    "unverified_embeddings": 0,
+    "legacy_text_chunks": 3318,
+    "embedding_model": "gemini-embedding-001",
+    "embedding_dimensions": 768,
+    "semantic_ready": false,
+    "estimated_input_tokens": 230017,
+    "estimate_note": "Character-based approximation, not provider token accounting or a price quote",
+    "estimated_batches": 89
+  },
+  "stop_reason": {
+    "error_type": "ClientError",
+    "code": 429,
+    "status": "RESOURCE_EXHAUSTED",
+    "quota": [
+      {
+        "quotaMetric": "generativelanguage.googleapis.com/embed_content_free_tier_requests",
+        "quotaId": "EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier",
+        "quotaValue": "1000"
+      }
+    ],
+    "retry_delay": "3864s"
+  },
+  "index_process_exit_code": 1,
+  "index_job_running": false,
+  "note": "The paced batch run stopped on the observed 1000/day free-tier limit. A batch rejection does not prove every single-query allowance is exhausted. Retry hint is not a guaranteed reset time. No billing changed."
+}

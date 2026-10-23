@@ -1,0 +1,43 @@
+{
+  "format": 1,
+  "kind": "default-library",
+  "created_at": "2026-10-23T14:34:53.163751+00:00",
+  "summary": {
+    "conversations": 0,
+    "document_chunks": 9320,
+    "documents": 4,
+    "extraction_checkpoints": 0,
+    "extraction_pages": 0,
+    "messages": 0,
+    "user_preferences": 0,
+    "user_subjects": 0,
+    "users": 0,
+    "stored_embeddings": 4681
+  },
+  "embedding_model": "gemini-embedding-001",
+  "embedding_dimensions": 768,
+  "index_complete": false,
+  "privacy": "No users, password hashes, private subjects, history, private PDFs, local filenames or authorization conversations.",
+  "files": {
+    "documents/CNotesForProfessionals.pdf": {
+      "bytes": 2490744,
+      "sha256": "4d9133ac6d74b412f2484aca91c482ca66b8d46ed7f94a317740fa34cebd9b36"
+    },
+    "documents/CPlusPlusNotesForProfessionals.pdf": {
+      "bytes": 5111998,
+      "sha256": "7b53f43eae83ef1260f02f6a492fdda498e71e4dff81b7b9306652d5d4e65918"
+    },
+    "documents/JavaNotesForProfessionals.pdf": {
+      "bytes": 7386481,
+      "sha256": "8751bee1658e8b2a247311eb9179625a4216b62f76d4b21545fb68e495dba706"
+    },
+    "documents/PythonNotesForProfessionals.pdf": {
+      "bytes": 6361425,
+      "sha256": "f5e2868ad977858fa0fa3eb123282f15a06f6eb4dd2b7c3a883e1dd1e138f61f"
+    },
+    "techquery.db": {
+      "bytes": 64303104,
+      "sha256": "b9145300b735a67c620e5426322e557ce69ed2deaa9afaeed1724aa66ca06b10"
+    }
+  }
+}

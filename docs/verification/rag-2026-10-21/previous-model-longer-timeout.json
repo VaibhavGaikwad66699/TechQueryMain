@@ -1,0 +1,56 @@
+{
+  "mode": "lexical",
+  "dataset": "java_holdout_2026_10_21.json",
+  "cases": [
+    {
+      "id": "equals_hash_contract",
+      "question": "If two Java objects are equal according to equals, what must hashCode return? Must unequal objects have different hash codes?",
+      "expected_fact": "Equal objects must have the same hash code; unequal objects need not have distinct hash codes.",
+      "retrieval_pass": true,
+      "citation_metadata_valid": true,
+      "original_pdf_page_verified": true,
+      "pages": [
+        253,
+        257
+      ],
+      "methods": [
+        "lexical",
+        "lexical"
+      ],
+      "scores": [
+        0.7395,
+        0.5158
+      ],
+      "answer": "Source excerpts (a generated explanation is unavailable):\n\n- plication, the hashCode method must consistently return the same integer, provided no information used in equals comparisons on the object is modi\ufb01ed. This integer need not remain consistent from one execution of an application to another execution of the same application. If two objects are equal according to the equals(Object) method, then calling the hashCode method on each of the two objects must produce the same integer result. It is not required that if two objects are unequal according to... \u2014 [javaNotesForProfessionals, PDF p. 253]\n\n- out.println(foo1.equals(foo2)); // prints true } } Here the overridden equals() method decides that the objects are equal if their \ufb01elds are the same. Notice that the hashCode() method was also overwritten. The contract for that method states that when two objects are equal, their hash values must also be the same. That's why one must almost always override hashCode() and equals() together. Pay special attention to the argument type of the equals method. It is Object obj, not Foo obj. If you put... \u2014 [javaNotesForProfessionals, PDF p. 257]\n\nThese are retrieved passages, not a verified complete answer. Check the original PDF for context.",
+      "context_used": true,
+      "response_mode": "source_excerpts",
+      "abstained": false,
+      "cited_source_keys": [],
+      "expected_abstention_pass": true,
+      "generation_pass": false
+    }
+  ],
+  "limitations": "Small release smoke set. Citation/page checks do not establish claim faithfulness. Human review of generated answers is required.",
+  "coverage": {
+    "total_chunks": 3318,
+    "embedded_chunks": 1164,
+    "missing_embeddings": 2154,
+    "unverified_embeddings": 0,
+    "legacy_text_chunks": 3318,
+    "embedding_model": "gemini-embedding-001",
+    "embedding_dimensions": 768,
+    "semantic_ready": false
+  },
+  "scope": {
+    "type": "full_book",
+    "chunks": 3318
+  },
+  "retrieval_passed": 1,
+  "total": 1,
+  "generation_passed": 0,
+  "recorded_run_configuration": {
+    "generation_model": "gemini-3.1-flash-lite",
+    "generation_timeout_ms": 30000,
+    "source": "Recorded from the command invocation; original case results are unchanged."
+  }
+}

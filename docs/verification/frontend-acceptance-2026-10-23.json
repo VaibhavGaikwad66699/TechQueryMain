@@ -1,0 +1,144 @@
+{
+  "timestamp": "2026-10-23T19:43:00+05:30",
+  "audit": "Frontend Acceptance and Usability Verification",
+  "browser_environment": {
+    "engine": "Chromium (Playwright automated browser via Antigravity browser tools)",
+    "viewport_emulation_widths_tested": [
+      {"width": 320, "height": 568, "label": "Narrow mobile / iPhone SE short screen", "horizontal_overflow": false},
+      {"width": 375, "height": 667, "label": "Standard mobile", "horizontal_overflow": false},
+      {"width": 768, "height": 1024, "label": "Tablet portrait", "horizontal_overflow": false},
+      {"width": 1024, "height": 768, "label": "Tablet landscape / small desktop", "horizontal_overflow": false},
+      {"width": 1440, "height": 900, "label": "Standard desktop", "horizontal_overflow": false},
+      {"width": 812, "height": 375, "label": "Short landscape mobile", "horizontal_overflow": false}
+    ],
+    "distinction": "Responsive viewport checks performed via Chromium emulation; physical devices (physical iOS/Android touch hardware, native Safari/WebKit, physical Firefox) remain distinguished and require physical hardware for sign-off."
+  },
+  "workflows_verified": {
+    "registration_login_logout": {
+      "status": "passed",
+      "details": "Registered disposable account test_disp_user_a, verified JWT authentication, avatar 'T', username and role display, and clean logout."
+    },
+    "four_shared_defaults": {
+      "status": "passed",
+      "details": "Every account (guest and authenticated) sees the four shared default books (Java, C, C++, Python) with 'Included for everyone' badges. Default books cannot be deleted by normal users or guests."
+    },
+    "private_subjects": {
+      "status": "passed",
+      "details": "Created personal subject 'Robotics Systems'; duplicate subject name rejected with clear validation error; independent same-named subjects verified across distinct accounts."
+    },
+    "pdf_upload_process_resume": {
+      "status": "passed",
+      "details": "Synthetic 1-page PDF uploaded under 'Robotics Systems', reached 'Reading PDF' active processing, polled until extraction completed (1 page / 1 chunk), safe quota stop recorded as 'partial' status, and processed document displayed in Saved PDF Books."
+    },
+    "preferences": {
+      "status": "passed",
+      "details": "Preferences modal opens with current values; updated Explanation Level to 'Beginner', Answer Style to 'Concise', toggle code examples, and preferred subject to 'Robotics Systems'; settings persisted to backend and applied to chat."
+    },
+    "chat_and_citations": {
+      "status": "passed",
+      "details": "Live RAG query against private book generated concise answer citing 'Autonomous Robotics Guide, PDF p. 1'; source card expanded to show exact chunk snippet; copy button successfully copies answer with Source note."
+    },
+    "technical_questions_tested": [
+      {
+        "topic": "Java case-conversion",
+        "question": "Does String toUpperCase always create a new object in Java?",
+        "subject": "Java",
+        "status_code": 200,
+        "response_mode": "generated",
+        "retrieval_mode": "lexical",
+        "citation": "javaNotesForProfessionals, PDF p. 747",
+        "correctness_caveat": "Accurately qualifies that when the string is already uppercase, the existing string may be returned."
+      },
+      {
+        "topic": "Python list/tuple",
+        "question": "What is the difference between lists and tuples in Python?",
+        "subject": "Python",
+        "status_code": 200,
+        "response_mode": "generated",
+        "retrieval_mode": "lexical",
+        "citation": "Python Notes for Professionals, PDF p. 59, 185, 186, 42",
+        "source_note": "Source note: the introductory tuple notation on this page is simplified. Its parentheses wording and misleading single-item example are excluded from the explanation; the original PDF is unchanged."
+      },
+      {
+        "topic": "One-item tuple syntax",
+        "question": "How do you create a tuple with one item in Python?",
+        "subject": "Python",
+        "status_code": 200,
+        "response_mode": "generated",
+        "retrieval_mode": "lexical",
+        "citation": "Python Notes for Professionals, PDF p. 185",
+        "notes": "Correctly emphasizes the required trailing comma."
+      },
+      {
+        "topic": "C++ constructors/destructors",
+        "question": "How do constructors and destructors work in C++?",
+        "subject": "C++",
+        "status_code": 200,
+        "response_mode": "generated",
+        "retrieval_mode": "lexical",
+        "citation": "C++ Notes for Professionals, PDF p. 240, 242, 469",
+        "notes": "Explains initialization, destruction, and cleanup lifecycle."
+      }
+    ],
+    "pdf_rendering_and_page_jump": {
+      "status": "passed",
+      "details": "Clicked 'View PDF' in expanded SourceCard. The browser PDF viewer launched with '#page=1', displaying the rendered PDF title, chapters, and page content."
+    },
+    "cross_user_isolation": {
+      "status": "passed",
+      "details": "Secondary account (TechStudent2) sees only 4 default books; cannot see or search User A's private reference; direct GET /api/v1/documents/8/download returns 404; can create an independent subject with the same name."
+    },
+    "deletion_confirmations": {
+      "status": "passed",
+      "details": "Subject deletion on-page modal cancel preserved subject; confirm permanently deleted subject, documents, and chunks, resetting preferred subject to All. Conversation deletion from sidebar verified."
+    }
+  },
+  "frontend_fixes_applied": [
+    {
+      "component": "ChatInterface.tsx",
+      "issue": "Broken hover contrast and non-existent Tailwind class hover:bg-slate-850 on sample question cards. On light parchment background (#f5ede1), hover:text-white made text completely unreadable.",
+      "fix": "Replaced with hover:bg-slate-800, hover:text-slate-100, and group-hover:text-brand-700."
+    },
+    {
+      "component": "ChatInterface.tsx",
+      "issue": "Missing accessible name (aria-label) on Copy Answer button and missing focus-visible keyboard outlines on copy, continue learning, and tuning bar buttons.",
+      "fix": "Added aria-label=\"Copy Answer\" and focus-visible:ring-2 focus-visible:ring-brand-500/50 styles."
+    },
+    {
+      "component": "SourceCard.tsx",
+      "issue": "Missing accessible name on View PDF link and missing focus-visible styling on expand and View PDF buttons.",
+      "fix": "Added aria-label={`View PDF for ${source.document_title} at page ${source.page_number}`} and focus-visible outline rings."
+    },
+    {
+      "component": "Sidebar.tsx",
+      "issue": "Missing accessible name on conversation delete button and missing focus-visible styling.",
+      "fix": "Added aria-label={`Delete conversation: ${c.title}`} and focus-visible:ring-2 focus-visible:ring-rose-500/50 styles."
+    },
+    {
+      "component": "DocumentManager.tsx",
+      "issue": "Missing aria-labels on Process Document and Delete Document buttons.",
+      "fix": "Added aria-label={`Process document ${doc.title}`} and aria-label={`Delete document ${doc.title}`} with focus-visible styles."
+    },
+    {
+      "component": "App.tsx",
+      "issue": "Unconditional setSystemHealth(null) during auth switch caused transient flicker to 'Knowledge Base 0' and amber 'Local study mode'.",
+      "fix": "Removed setSystemHealth(null) in user switch effect to preserve smooth rendering during background health verification."
+    }
+  ],
+  "preservation_status": {
+    "users_count": 3,
+    "user_preferences_count": 3,
+    "conversations_count": 3,
+    "messages_count": 10,
+    "documents_count": 4,
+    "total_chunks_count": 9320,
+    "embedded_chunks_count": 4681,
+    "missing_embeddings_count": 4639,
+    "real_data_mutated": false
+  },
+  "automated_test_results": {
+    "frontend_client_tests": "10 passed, 0 failed (node --test tests/*.test.mjs)",
+    "frontend_production_build": "tsc && vite build passed in 5.50s",
+    "backend_pytest_suite": "221 passed, 1 skipped (Windows OS symlink permission)"
+  }
+}

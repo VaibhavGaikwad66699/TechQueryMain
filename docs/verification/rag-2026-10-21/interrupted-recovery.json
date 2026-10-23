@@ -1,0 +1,10 @@
+{
+  "result": "passed",
+  "scope": "disposable on-disk SQLite and self-authored PDF; offline embedding stub; no provider calls",
+  "worker_was_stopped_before_recovery": true,
+  "stale_processing_observed": true,
+  "explicit_recover_and_resume_passed": true,
+  "original_fixture_chunks_preserved": 2,
+  "fixture_pdf_hash_unchanged": true,
+  "automatic_recovery_tested": false
+}

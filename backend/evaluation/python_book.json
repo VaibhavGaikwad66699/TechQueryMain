@@ -1,0 +1,25 @@
+{
+  "book_title": "Python Notes for Professionals",
+  "cases": [
+    {
+      "id": "python_tuple_immutability",
+      "question": "What is the difference between lists and tuples in Python?",
+      "pages": [
+        186,
+        187
+      ],
+      "evidence_terms": [
+        "tuple",
+        "immutable"
+      ],
+      "expected_fact": "Tuples are immutable sequences; item assignment is not allowed, although contained mutable objects can change."
+    },
+    {
+      "id": "python_unsupported_astronomy",
+      "question": "What is the orbital period of Neptune?",
+      "pages": [],
+      "evidence_terms": [],
+      "expected_fact": "Abstain."
+    }
+  ]
+}

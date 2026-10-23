@@ -1,0 +1,648 @@
+{
+  "state": "quota_reached",
+  "new_embeddings_saved": 966,
+  "initial": [
+    {
+      "document_id": 4,
+      "language": "Java",
+      "status": "partial",
+      "total_chunks": 3318,
+      "embedded_chunks": 1900,
+      "missing_embeddings": 1418,
+      "unverified_embeddings": 0,
+      "legacy_text_chunks": 3318,
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimensions": 768,
+      "provider_use_allowed": true,
+      "semantic_ready": false
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "status": "partial",
+      "total_chunks": 1124,
+      "embedded_chunks": 0,
+      "missing_embeddings": 1124,
+      "unverified_embeddings": 0,
+      "legacy_text_chunks": 0,
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimensions": 768,
+      "provider_use_allowed": true,
+      "semantic_ready": false
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "status": "partial",
+      "total_chunks": 2323,
+      "embedded_chunks": 0,
+      "missing_embeddings": 2323,
+      "unverified_embeddings": 0,
+      "legacy_text_chunks": 0,
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimensions": 768,
+      "provider_use_allowed": true,
+      "semantic_ready": false
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "status": "partial",
+      "total_chunks": 2555,
+      "embedded_chunks": 0,
+      "missing_embeddings": 2555,
+      "unverified_embeddings": 0,
+      "legacy_text_chunks": 0,
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimensions": 768,
+      "provider_use_allowed": true,
+      "semantic_ready": false
+    }
+  ],
+  "batch_size": 16,
+  "pace_seconds": 14.0,
+  "batches": [
+    {
+      "document_id": 5,
+      "language": "C",
+      "saved": 9,
+      "embedded": 9,
+      "total": 1124,
+      "new_embeddings_saved": 9,
+      "priority_pages": [
+        267,
+        268
+      ]
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "saved": 8,
+      "embedded": 8,
+      "total": 2323,
+      "new_embeddings_saved": 17,
+      "priority_pages": [
+        651,
+        652
+      ]
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "saved": 5,
+      "embedded": 5,
+      "total": 2555,
+      "new_embeddings_saved": 22,
+      "priority_pages": [
+        186,
+        187
+      ]
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "saved": 16,
+      "embedded": 25,
+      "total": 1124,
+      "new_embeddings_saved": 38
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "saved": 16,
+      "embedded": 24,
+      "total": 2323,
+      "new_embeddings_saved": 54
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "saved": 16,
+      "embedded": 21,
+      "total": 2555,
+      "new_embeddings_saved": 70
+    },
+    {
+      "document_id": 4,
+      "language": "Java",
+      "saved": 16,
+      "embedded": 1916,
+      "total": 3318,
+      "new_embeddings_saved": 86
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "saved": 16,
+      "embedded": 41,
+      "total": 1124,
+      "new_embeddings_saved": 102
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "saved": 16,
+      "embedded": 40,
+      "total": 2323,
+      "new_embeddings_saved": 118
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "saved": 16,
+      "embedded": 37,
+      "total": 2555,
+      "new_embeddings_saved": 134
+    },
+    {
+      "document_id": 4,
+      "language": "Java",
+      "saved": 16,
+      "embedded": 1932,
+      "total": 3318,
+      "new_embeddings_saved": 150
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "saved": 16,
+      "embedded": 57,
+      "total": 1124,
+      "new_embeddings_saved": 166
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "saved": 16,
+      "embedded": 56,
+      "total": 2323,
+      "new_embeddings_saved": 182
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "saved": 16,
+      "embedded": 53,
+      "total": 2555,
+      "new_embeddings_saved": 198
+    },
+    {
+      "document_id": 4,
+      "language": "Java",
+      "saved": 16,
+      "embedded": 1948,
+      "total": 3318,
+      "new_embeddings_saved": 214
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "saved": 16,
+      "embedded": 73,
+      "total": 1124,
+      "new_embeddings_saved": 230
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "saved": 16,
+      "embedded": 72,
+      "total": 2323,
+      "new_embeddings_saved": 246
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "saved": 16,
+      "embedded": 69,
+      "total": 2555,
+      "new_embeddings_saved": 262
+    },
+    {
+      "document_id": 4,
+      "language": "Java",
+      "saved": 16,
+      "embedded": 1964,
+      "total": 3318,
+      "new_embeddings_saved": 278
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "saved": 16,
+      "embedded": 89,
+      "total": 1124,
+      "new_embeddings_saved": 294
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "saved": 16,
+      "embedded": 88,
+      "total": 2323,
+      "new_embeddings_saved": 310
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "saved": 16,
+      "embedded": 85,
+      "total": 2555,
+      "new_embeddings_saved": 326
+    },
+    {
+      "document_id": 4,
+      "language": "Java",
+      "saved": 16,
+      "embedded": 1980,
+      "total": 3318,
+      "new_embeddings_saved": 342
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "saved": 16,
+      "embedded": 105,
+      "total": 1124,
+      "new_embeddings_saved": 358
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "saved": 16,
+      "embedded": 104,
+      "total": 2323,
+      "new_embeddings_saved": 374
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "saved": 16,
+      "embedded": 101,
+      "total": 2555,
+      "new_embeddings_saved": 390
+    },
+    {
+      "document_id": 4,
+      "language": "Java",
+      "saved": 16,
+      "embedded": 1996,
+      "total": 3318,
+      "new_embeddings_saved": 406
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "saved": 16,
+      "embedded": 121,
+      "total": 1124,
+      "new_embeddings_saved": 422
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "saved": 16,
+      "embedded": 120,
+      "total": 2323,
+      "new_embeddings_saved": 438
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "saved": 16,
+      "embedded": 117,
+      "total": 2555,
+      "new_embeddings_saved": 454
+    },
+    {
+      "document_id": 4,
+      "language": "Java",
+      "saved": 16,
+      "embedded": 2012,
+      "total": 3318,
+      "new_embeddings_saved": 470
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "saved": 16,
+      "embedded": 137,
+      "total": 1124,
+      "new_embeddings_saved": 486
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "saved": 16,
+      "embedded": 136,
+      "total": 2323,
+      "new_embeddings_saved": 502
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "saved": 16,
+      "embedded": 133,
+      "total": 2555,
+      "new_embeddings_saved": 518
+    },
+    {
+      "document_id": 4,
+      "language": "Java",
+      "saved": 16,
+      "embedded": 2028,
+      "total": 3318,
+      "new_embeddings_saved": 534
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "saved": 16,
+      "embedded": 153,
+      "total": 1124,
+      "new_embeddings_saved": 550
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "saved": 16,
+      "embedded": 152,
+      "total": 2323,
+      "new_embeddings_saved": 566
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "saved": 16,
+      "embedded": 149,
+      "total": 2555,
+      "new_embeddings_saved": 582
+    },
+    {
+      "document_id": 4,
+      "language": "Java",
+      "saved": 16,
+      "embedded": 2044,
+      "total": 3318,
+      "new_embeddings_saved": 598
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "saved": 16,
+      "embedded": 169,
+      "total": 1124,
+      "new_embeddings_saved": 614
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "saved": 16,
+      "embedded": 168,
+      "total": 2323,
+      "new_embeddings_saved": 630
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "saved": 16,
+      "embedded": 165,
+      "total": 2555,
+      "new_embeddings_saved": 646
+    },
+    {
+      "document_id": 4,
+      "language": "Java",
+      "saved": 16,
+      "embedded": 2060,
+      "total": 3318,
+      "new_embeddings_saved": 662
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "saved": 16,
+      "embedded": 185,
+      "total": 1124,
+      "new_embeddings_saved": 678
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "saved": 16,
+      "embedded": 184,
+      "total": 2323,
+      "new_embeddings_saved": 694
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "saved": 16,
+      "embedded": 181,
+      "total": 2555,
+      "new_embeddings_saved": 710
+    },
+    {
+      "document_id": 4,
+      "language": "Java",
+      "saved": 16,
+      "embedded": 2076,
+      "total": 3318,
+      "new_embeddings_saved": 726
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "saved": 16,
+      "embedded": 201,
+      "total": 1124,
+      "new_embeddings_saved": 742
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "saved": 16,
+      "embedded": 200,
+      "total": 2323,
+      "new_embeddings_saved": 758
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "saved": 16,
+      "embedded": 197,
+      "total": 2555,
+      "new_embeddings_saved": 774
+    },
+    {
+      "document_id": 4,
+      "language": "Java",
+      "saved": 16,
+      "embedded": 2092,
+      "total": 3318,
+      "new_embeddings_saved": 790
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "saved": 16,
+      "embedded": 217,
+      "total": 1124,
+      "new_embeddings_saved": 806
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "saved": 16,
+      "embedded": 216,
+      "total": 2323,
+      "new_embeddings_saved": 822
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "saved": 16,
+      "embedded": 213,
+      "total": 2555,
+      "new_embeddings_saved": 838
+    },
+    {
+      "document_id": 4,
+      "language": "Java",
+      "saved": 16,
+      "embedded": 2108,
+      "total": 3318,
+      "new_embeddings_saved": 854
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "saved": 16,
+      "embedded": 233,
+      "total": 1124,
+      "new_embeddings_saved": 870
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "saved": 16,
+      "embedded": 232,
+      "total": 2323,
+      "new_embeddings_saved": 886
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "saved": 16,
+      "embedded": 229,
+      "total": 2555,
+      "new_embeddings_saved": 902
+    },
+    {
+      "document_id": 4,
+      "language": "Java",
+      "saved": 16,
+      "embedded": 2124,
+      "total": 3318,
+      "new_embeddings_saved": 918
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "saved": 16,
+      "embedded": 249,
+      "total": 1124,
+      "new_embeddings_saved": 934
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "saved": 16,
+      "embedded": 248,
+      "total": 2323,
+      "new_embeddings_saved": 950
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "saved": 16,
+      "embedded": 245,
+      "total": 2555,
+      "new_embeddings_saved": 966
+    }
+  ],
+  "billing_changed": false,
+  "current": [
+    {
+      "document_id": 4,
+      "language": "Java",
+      "status": "partial",
+      "total_chunks": 3318,
+      "embedded_chunks": 2124,
+      "missing_embeddings": 1194,
+      "unverified_embeddings": 0,
+      "legacy_text_chunks": 3318,
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimensions": 768,
+      "provider_use_allowed": true,
+      "semantic_ready": false
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "status": "partial",
+      "total_chunks": 1124,
+      "embedded_chunks": 249,
+      "missing_embeddings": 875,
+      "unverified_embeddings": 0,
+      "legacy_text_chunks": 0,
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimensions": 768,
+      "provider_use_allowed": true,
+      "semantic_ready": false
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "status": "partial",
+      "total_chunks": 2323,
+      "embedded_chunks": 248,
+      "missing_embeddings": 2075,
+      "unverified_embeddings": 0,
+      "legacy_text_chunks": 0,
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimensions": 768,
+      "provider_use_allowed": true,
+      "semantic_ready": false
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "status": "partial",
+      "total_chunks": 2555,
+      "embedded_chunks": 245,
+      "missing_embeddings": 2310,
+      "unverified_embeddings": 0,
+      "legacy_text_chunks": 0,
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimensions": 768,
+      "provider_use_allowed": true,
+      "semantic_ready": false
+    }
+  ],
+  "elapsed_seconds": 1238.424,
+  "failure": {
+    "document_id": 4,
+    "error_type": "ClientError",
+    "code": 429,
+    "status": "RESOURCE_EXHAUSTED",
+    "quota": [
+      {
+        "quotaMetric": "generativelanguage.googleapis.com/embed_content_free_tier_requests",
+        "quotaId": "EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier",
+        "quotaValue": "1000"
+      }
+    ],
+    "retry_delay": "50116s"
+  }
+}

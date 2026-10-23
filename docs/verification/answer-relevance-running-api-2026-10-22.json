@@ -1,0 +1,61 @@
+{
+  "health_status": 200,
+  "library_status": 200,
+  "default_books": 4,
+  "all_books_not_processing": true,
+  "query_status": 200,
+  "elapsed_seconds": 13.452,
+  "query": {
+    "answer": "A default constructor is a member function that requires no parameters when called, is named after the type it constructs, and can use a member initializer list to initialize members and a constructor body for more complex setup. [C++ Notes for Professionals, PDF p. 240]\n\nConstructors are called when an object is created, such as when instantiating automatic variables, creating arrays, or allocating memory with new. [C++ Notes for Professionals, PDF p. 240] [C++ Notes for Professionals, PDF p. 242]\n\nA destructor is a function without arguments, named after its type with a tilde prefix, that is called when a user-defined object is about to be destroyed. [C++ Notes for Professionals, PDF p. 242]\n\nWhen an object is destroyed, its destructor cleans up resources (such as freeing dynamically allocated memory via delete[]), and child destructors automatically invoke their base class destructors and member destructors. [C++ Notes for Professionals, PDF p. 242]\n\nConstructors and destructors can also manage resource lifecycles automatically as part of RAII, where a constructor acquires a resource (such as locking a mutex) and the guaranteed destructor call releases it (such as unlocking the mutex). [C++ Notes for Professionals, PDF p. 469]",
+    "sources": [
+      {
+        "document_id": 6,
+        "document_title": "C++ Notes for Professionals",
+        "page_number": 240,
+        "chunk_index": 881,
+        "retrieval_method": "lexical",
+        "similarity_score": 0.4261
+      },
+      {
+        "document_id": 6,
+        "document_title": "C++ Notes for Professionals",
+        "page_number": 242,
+        "chunk_index": 888,
+        "retrieval_method": "lexical",
+        "similarity_score": 1.0
+      },
+      {
+        "document_id": 6,
+        "document_title": "C++ Notes for Professionals",
+        "page_number": 469,
+        "chunk_index": 1604,
+        "retrieval_method": "lexical",
+        "similarity_score": 1.0
+      }
+    ],
+    "context_used": true,
+    "conversation_id": null,
+    "message_id": null,
+    "preferences_applied": {
+      "explanation_level": "Intermediate",
+      "answer_style": "Detailed",
+      "include_examples": true
+    },
+    "suggested_questions": [
+      "Can you explain constructor destructor work in with a simple example?",
+      "What are the key differences and trade-offs in constructor destructor work in?",
+      "Give me a short practice question about constructor destructor work in."
+    ],
+    "response_mode": "generated",
+    "retrieval_mode": "lexical",
+    "abstained": false
+  },
+  "post_restart_readiness": {
+    "checked_at": "2026-10-22T14:32:51.946494+00:00",
+    "health_status": 200,
+    "documents": 4,
+    "chunks": 9320,
+    "compatible_embeddings": 2866,
+    "all_original_database_rows_preserved": true
+  }
+}

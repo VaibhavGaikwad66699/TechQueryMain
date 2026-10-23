@@ -1,0 +1,63 @@
+{
+  "checked_at": "2026-10-22T15:49:25.002094+00:00",
+  "tables": {
+    "users": {
+      "rows": 2,
+      "all_fields_identical": true
+    },
+    "user_preferences": {
+      "rows": 2,
+      "all_fields_identical": true
+    },
+    "documents": {
+      "rows": 4,
+      "all_fields_identical": true
+    },
+    "conversations": {
+      "rows": 2,
+      "all_fields_identical": true
+    },
+    "document_chunks": {
+      "rows": 9320,
+      "all_fields_identical": true
+    },
+    "messages": {
+      "rows": 8,
+      "all_fields_identical": true
+    },
+    "user_subjects": {
+      "rows": 0,
+      "all_fields_identical": true
+    },
+    "library_migrations": {
+      "rows": 1,
+      "all_fields_identical": true
+    }
+  },
+  "pdfs": {
+    "33875594b9c64771bf94c75623727561_CPlusPlusNotesForProfessionals.pdf": {
+      "preserved": true,
+      "source_original_preserved": true
+    },
+    "64fc5f83816e459198fcddc0ef4d7b9b_CNotesForProfessionals.pdf": {
+      "preserved": true,
+      "source_original_preserved": true
+    },
+    "8ee9871f_JavaNotesForProfessionals.pdf": {
+      "preserved": true,
+      "source_original_preserved": true
+    },
+    "d197f426ed2642e7ae417955fcce1575_PythonNotesForProfessionals.pdf": {
+      "preserved": true,
+      "source_original_preserved": true
+    }
+  },
+  "pdf_count": 4,
+  "compatible_embeddings": 3680,
+  "missing_embeddings": 5640,
+  "new_tables": {
+    "extraction_checkpoints": 0,
+    "extraction_pages": 0
+  },
+  "all_preserved": true
+}

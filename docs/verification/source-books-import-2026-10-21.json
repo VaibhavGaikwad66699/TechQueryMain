@@ -1,0 +1,58 @@
+{
+  "mode": "apply_local_only",
+  "books": [
+    {
+      "action": "imported_local_only",
+      "document_id": 5,
+      "language": "C",
+      "title": "C Notes for Professionals",
+      "source_sha256": "4d9133ac6d74b412f2484aca91c482ca66b8d46ed7f94a317740fa34cebd9b36",
+      "total_pages": 342,
+      "pages_with_text": 342,
+      "total_chunks": 1124,
+      "extractor": "pdftotext version 4.00",
+      "extraction_seconds": 5.807,
+      "extractor_peak_working_set_bytes": 14848000,
+      "import_process_peak_working_set_bytes": 97259520,
+      "embedded_chunks": 0,
+      "provider_use_allowed": false,
+      "no_provider_calls": true
+    },
+    {
+      "action": "imported_local_only",
+      "document_id": 6,
+      "language": "C++",
+      "title": "C++ Notes for Professionals",
+      "source_sha256": "7b53f43eae83ef1260f02f6a492fdda498e71e4dff81b7b9306652d5d4e65918",
+      "total_pages": 708,
+      "pages_with_text": 708,
+      "total_chunks": 2323,
+      "extractor": "pdftotext version 4.00",
+      "extraction_seconds": 10.495,
+      "extractor_peak_working_set_bytes": 15872000,
+      "import_process_peak_working_set_bytes": 113213440,
+      "embedded_chunks": 0,
+      "provider_use_allowed": false,
+      "no_provider_calls": true
+    },
+    {
+      "action": "imported_local_only",
+      "document_id": 7,
+      "language": "Python",
+      "title": "Python Notes for Professionals",
+      "source_sha256": "f5e2868ad977858fa0fa3eb123282f15a06f6eb4dd2b7c3a883e1dd1e138f61f",
+      "total_pages": 856,
+      "pages_with_text": 856,
+      "total_chunks": 2555,
+      "extractor": "pdftotext version 4.00",
+      "extraction_seconds": 15.142,
+      "extractor_peak_working_set_bytes": 17342464,
+      "import_process_peak_working_set_bytes": 117878784,
+      "embedded_chunks": 0,
+      "provider_use_allowed": false,
+      "no_provider_calls": true
+    }
+  ],
+  "no_provider_calls": true,
+  "elapsed_seconds": 34.238
+}

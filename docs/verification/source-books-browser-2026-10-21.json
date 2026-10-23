@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-21",
+  "browser": "Codex in-app Chromium browser",
+  "url": "http://localhost:5173/",
+  "library_records_displayed": 7,
+  "new_books_displayed": ["C Notes for Professionals", "C++ Notes for Professionals", "Python Notes for Professionals"],
+  "new_books_local_passages_only_labels": 3,
+  "new_books_process_controls_disabled_with_permission_notice": 3,
+  "java_progress_displayed": "1900/3318",
+  "retained_outside_scope_samples_displayed": 2,
+  "python_sample_question": {
+    "response_label": "PDF excerpts",
+    "retrieval_label": "Keyword search",
+    "top_cited_physical_page": 186,
+    "permission_notice_visible": true,
+    "source_pdf_link": "/api/v1/documents/7/download#page=186"
+  },
+  "screenshot": "source-books-library-2026-10-21.png",
+  "limitations": "Guest desktop flow only in this incremental check. Existing account tests are isolated automated checks. Some lower-ranked Python lexical passages are broad; precision and generated-answer/version checks remain open. Physical-device and actual PDF-viewer acceptance remain pending."
+}

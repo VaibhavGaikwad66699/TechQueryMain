@@ -1,0 +1,77 @@
+{
+  "checked_at": "2026-10-22T14:27:08.904166+00:00",
+  "database_integrity": "ok",
+  "tables": {
+    "conversations": {
+      "rows": 2,
+      "identical_to_before": true
+    },
+    "document_chunks": {
+      "rows": 9320,
+      "identical_to_before": true
+    },
+    "documents": {
+      "rows": 4,
+      "identical_to_before": true
+    },
+    "library_migrations": {
+      "rows": 1,
+      "identical_to_before": true
+    },
+    "messages": {
+      "rows": 8,
+      "identical_to_before": true
+    },
+    "user_preferences": {
+      "rows": 2,
+      "identical_to_before": true
+    },
+    "user_subjects": {
+      "rows": 0,
+      "identical_to_before": true
+    },
+    "users": {
+      "rows": 2,
+      "identical_to_before": true
+    }
+  },
+  "books": [
+    {
+      "document_id": 4,
+      "subject": "Java",
+      "original_filename": "JavaNotesForProfessionals.pdf",
+      "sha256": "8751bee1658e8b2a247311eb9179625a4216b62f76d4b21545fb68e495dba706",
+      "matches_original_source": true,
+      "chunks": 3318,
+      "compatible_embeddings": 2124
+    },
+    {
+      "document_id": 5,
+      "subject": "C",
+      "original_filename": "CNotesForProfessionals.pdf",
+      "sha256": "4d9133ac6d74b412f2484aca91c482ca66b8d46ed7f94a317740fa34cebd9b36",
+      "matches_original_source": true,
+      "chunks": 1124,
+      "compatible_embeddings": 249
+    },
+    {
+      "document_id": 6,
+      "subject": "C++",
+      "original_filename": "CPlusPlusNotesForProfessionals.pdf",
+      "sha256": "7b53f43eae83ef1260f02f6a492fdda498e71e4dff81b7b9306652d5d4e65918",
+      "matches_original_source": true,
+      "chunks": 2323,
+      "compatible_embeddings": 248
+    },
+    {
+      "document_id": 7,
+      "subject": "Python",
+      "original_filename": "PythonNotesForProfessionals.pdf",
+      "sha256": "f5e2868ad977858fa0fa3eb123282f15a06f6eb4dd2b7c3a883e1dd1e138f61f",
+      "matches_original_source": true,
+      "chunks": 2555,
+      "compatible_embeddings": 245
+    }
+  ],
+  "all_preserved": true
+}

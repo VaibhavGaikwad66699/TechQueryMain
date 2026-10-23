@@ -1,0 +1,13 @@
+{
+  "result": "passed",
+  "backend_ready": true,
+  "frontend_http": 200,
+  "frontend_proxy_ready": true,
+  "library_documents": 4,
+  "extracted_chunks": 3330,
+  "compatible_embeddings": 924,
+  "guest_mutation_flags": false,
+  "active_processing_jobs": 0,
+  "validation_422_compact": true,
+  "scope": "running local services after reload; read-only library checks and invalid-input request; no Gemini calls"
+}

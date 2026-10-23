@@ -1,0 +1,24 @@
+{
+  "book_title": "C++ Notes for Professionals",
+  "cases": [
+    {
+      "id": "cpp_raii",
+      "question": "How does RAII use constructors and destructors for resource management in C++?",
+      "pages": [
+        651,
+        652
+      ],
+      "evidence_terms": [
+        "resource"
+      ],
+      "expected_fact": "RAII means Resource Acquisition Is Initialization and uses object lifetime/ownership to manage resources."
+    },
+    {
+      "id": "cpp_unsupported_astronomy",
+      "question": "What is the orbital period of Neptune?",
+      "pages": [],
+      "evidence_terms": [],
+      "expected_fact": "Abstain."
+    }
+  ]
+}

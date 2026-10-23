@@ -1,0 +1,48 @@
+{
+  "checked_at": "2026-10-21T18:25:23.799763+00:00",
+  "backend_tests_passed": 132,
+  "frontend_tests_passed": 9,
+  "production_build": "passed",
+  "live_checks": {
+    "temporary_subject_and_two_uploaded_files_removed": true,
+    "deleted_book_downloads_return_404": true,
+    "preferred_subject_reset_to_all": true,
+    "on_page_confirmation_visible": true,
+    "cancel_preserves_empty_test_subject": true,
+    "empty_subject_deleted_through_api": true,
+    "default_subject_deletion_rejected": true,
+    "mobile_confirmation_fits_375x667_without_page_overflow": true,
+    "temporary_account_and_subjects_removed": true,
+    "gemini_calls_for_these_tests": false
+  },
+  "isolated_tests": [
+    "Same-name subject owner isolation",
+    "Guests and administrators cannot delete another owner\u2019s subject",
+    "Default subjects protected",
+    "Queued/processing books block deletion",
+    "Failed second file move and failed database commit restore all originals and preferences",
+    "Cleanup failures reported explicitly",
+    "Single-book deletion retains the subject and preference",
+    "Conversation history retained",
+    "Encoded subject names and no automatic deletion retries"
+  ],
+  "preservation": {
+    "all_pre_test_rows_identical": true,
+    "row_counts": {
+      "users": 2,
+      "user_preferences": 2,
+      "user_subjects": 1,
+      "conversations": 2,
+      "messages": 8,
+      "documents": 4,
+      "document_chunks": 9320
+    },
+    "all_original_stored_pdf_hashes_unchanged": true
+  },
+  "limits": [
+    "Library write serialization is local to one API process.",
+    "Hard process/power loss during staged deletion requires operator review of .subject-delete-* directories before retrying; automatic crash recovery is not implemented.",
+    "Physical-device and Safari/Firefox acceptance remain open."
+  ],
+  "aws_resources_created": false
+}

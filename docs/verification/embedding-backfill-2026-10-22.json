@@ -1,0 +1,835 @@
+{
+  "checked_at": "2026-10-22T15:06:46.771732+00:00",
+  "state": "daily_quota_reached",
+  "initial_compatible_embeddings": 2866,
+  "initial_missing_embeddings": 6454,
+  "new_embeddings_saved": 814,
+  "current_compatible_embeddings": 3680,
+  "missing_embeddings": 5640,
+  "total_chunks": 9320,
+  "quota_probe": {
+    "checked_at": "2026-10-22T14:37:05.481538+00:00",
+    "model": "gemini-embedding-001",
+    "task_type": "RETRIEVAL_DOCUMENT",
+    "probe_text": "Self-authored one-line quota check; no book content",
+    "remaining_quota_exact": "Not exposed by this API-key embedding call.",
+    "ok": true,
+    "dimensions": 768,
+    "note": "One document embedding succeeded; this does not prove quota for all missing chunks."
+  },
+  "bulk_run": {
+    "state": "quota_reached",
+    "new_embeddings_saved": 806,
+    "initial": [
+      {
+        "document_id": 4,
+        "language": "Java",
+        "status": "partial",
+        "total_chunks": 3318,
+        "embedded_chunks": 2124,
+        "missing_embeddings": 1194,
+        "unverified_embeddings": 0,
+        "legacy_text_chunks": 3318,
+        "embedding_model": "gemini-embedding-001",
+        "embedding_dimensions": 768,
+        "provider_use_allowed": true,
+        "semantic_ready": false
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "status": "partial",
+        "total_chunks": 1124,
+        "embedded_chunks": 249,
+        "missing_embeddings": 875,
+        "unverified_embeddings": 0,
+        "legacy_text_chunks": 0,
+        "embedding_model": "gemini-embedding-001",
+        "embedding_dimensions": 768,
+        "provider_use_allowed": true,
+        "semantic_ready": false
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "status": "partial",
+        "total_chunks": 2323,
+        "embedded_chunks": 248,
+        "missing_embeddings": 2075,
+        "unverified_embeddings": 0,
+        "legacy_text_chunks": 0,
+        "embedding_model": "gemini-embedding-001",
+        "embedding_dimensions": 768,
+        "provider_use_allowed": true,
+        "semantic_ready": false
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "status": "partial",
+        "total_chunks": 2555,
+        "embedded_chunks": 245,
+        "missing_embeddings": 2310,
+        "unverified_embeddings": 0,
+        "legacy_text_chunks": 0,
+        "embedding_model": "gemini-embedding-001",
+        "embedding_dimensions": 768,
+        "provider_use_allowed": true,
+        "semantic_ready": false
+      }
+    ],
+    "batch_size": 16,
+    "pace_seconds": 14.0,
+    "batches": [
+      {
+        "document_id": 6,
+        "language": "C++",
+        "saved": 8,
+        "embedded": 256,
+        "total": 2323,
+        "new_embeddings_saved": 8,
+        "priority_pages": [
+          240,
+          242,
+          469
+        ]
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "saved": 5,
+        "embedded": 254,
+        "total": 1124,
+        "new_embeddings_saved": 13,
+        "priority_pages": [
+          77,
+          161
+        ]
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "saved": 9,
+        "embedded": 254,
+        "total": 2555,
+        "new_embeddings_saved": 22,
+        "priority_pages": [
+          185,
+          186,
+          396,
+          549
+        ]
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "saved": 16,
+        "embedded": 272,
+        "total": 2323,
+        "new_embeddings_saved": 38
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "saved": 16,
+        "embedded": 270,
+        "total": 1124,
+        "new_embeddings_saved": 54
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "saved": 16,
+        "embedded": 270,
+        "total": 2555,
+        "new_embeddings_saved": 70
+      },
+      {
+        "document_id": 4,
+        "language": "Java",
+        "saved": 16,
+        "embedded": 2140,
+        "total": 3318,
+        "new_embeddings_saved": 86
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "saved": 16,
+        "embedded": 288,
+        "total": 2323,
+        "new_embeddings_saved": 102
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "saved": 16,
+        "embedded": 286,
+        "total": 1124,
+        "new_embeddings_saved": 118
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "saved": 16,
+        "embedded": 286,
+        "total": 2555,
+        "new_embeddings_saved": 134
+      },
+      {
+        "document_id": 4,
+        "language": "Java",
+        "saved": 16,
+        "embedded": 2156,
+        "total": 3318,
+        "new_embeddings_saved": 150
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "saved": 16,
+        "embedded": 304,
+        "total": 2323,
+        "new_embeddings_saved": 166
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "saved": 16,
+        "embedded": 302,
+        "total": 1124,
+        "new_embeddings_saved": 182
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "saved": 16,
+        "embedded": 302,
+        "total": 2555,
+        "new_embeddings_saved": 198
+      },
+      {
+        "document_id": 4,
+        "language": "Java",
+        "saved": 16,
+        "embedded": 2172,
+        "total": 3318,
+        "new_embeddings_saved": 214
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "saved": 16,
+        "embedded": 320,
+        "total": 2323,
+        "new_embeddings_saved": 230
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "saved": 16,
+        "embedded": 318,
+        "total": 1124,
+        "new_embeddings_saved": 246
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "saved": 16,
+        "embedded": 318,
+        "total": 2555,
+        "new_embeddings_saved": 262
+      },
+      {
+        "document_id": 4,
+        "language": "Java",
+        "saved": 16,
+        "embedded": 2188,
+        "total": 3318,
+        "new_embeddings_saved": 278
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "saved": 16,
+        "embedded": 336,
+        "total": 2323,
+        "new_embeddings_saved": 294
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "saved": 16,
+        "embedded": 334,
+        "total": 1124,
+        "new_embeddings_saved": 310
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "saved": 16,
+        "embedded": 334,
+        "total": 2555,
+        "new_embeddings_saved": 326
+      },
+      {
+        "document_id": 4,
+        "language": "Java",
+        "saved": 16,
+        "embedded": 2204,
+        "total": 3318,
+        "new_embeddings_saved": 342
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "saved": 16,
+        "embedded": 352,
+        "total": 2323,
+        "new_embeddings_saved": 358
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "saved": 16,
+        "embedded": 350,
+        "total": 1124,
+        "new_embeddings_saved": 374
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "saved": 16,
+        "embedded": 350,
+        "total": 2555,
+        "new_embeddings_saved": 390
+      },
+      {
+        "document_id": 4,
+        "language": "Java",
+        "saved": 16,
+        "embedded": 2220,
+        "total": 3318,
+        "new_embeddings_saved": 406
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "saved": 16,
+        "embedded": 368,
+        "total": 2323,
+        "new_embeddings_saved": 422
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "saved": 16,
+        "embedded": 366,
+        "total": 1124,
+        "new_embeddings_saved": 438
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "saved": 16,
+        "embedded": 366,
+        "total": 2555,
+        "new_embeddings_saved": 454
+      },
+      {
+        "document_id": 4,
+        "language": "Java",
+        "saved": 16,
+        "embedded": 2236,
+        "total": 3318,
+        "new_embeddings_saved": 470
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "saved": 16,
+        "embedded": 384,
+        "total": 2323,
+        "new_embeddings_saved": 486
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "saved": 16,
+        "embedded": 382,
+        "total": 1124,
+        "new_embeddings_saved": 502
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "saved": 16,
+        "embedded": 382,
+        "total": 2555,
+        "new_embeddings_saved": 518
+      },
+      {
+        "document_id": 4,
+        "language": "Java",
+        "saved": 16,
+        "embedded": 2252,
+        "total": 3318,
+        "new_embeddings_saved": 534
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "saved": 16,
+        "embedded": 400,
+        "total": 2323,
+        "new_embeddings_saved": 550
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "saved": 16,
+        "embedded": 398,
+        "total": 1124,
+        "new_embeddings_saved": 566
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "saved": 16,
+        "embedded": 398,
+        "total": 2555,
+        "new_embeddings_saved": 582
+      },
+      {
+        "document_id": 4,
+        "language": "Java",
+        "saved": 16,
+        "embedded": 2268,
+        "total": 3318,
+        "new_embeddings_saved": 598
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "saved": 16,
+        "embedded": 416,
+        "total": 2323,
+        "new_embeddings_saved": 614
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "saved": 16,
+        "embedded": 414,
+        "total": 1124,
+        "new_embeddings_saved": 630
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "saved": 16,
+        "embedded": 414,
+        "total": 2555,
+        "new_embeddings_saved": 646
+      },
+      {
+        "document_id": 4,
+        "language": "Java",
+        "saved": 16,
+        "embedded": 2284,
+        "total": 3318,
+        "new_embeddings_saved": 662
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "saved": 16,
+        "embedded": 432,
+        "total": 2323,
+        "new_embeddings_saved": 678
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "saved": 16,
+        "embedded": 430,
+        "total": 1124,
+        "new_embeddings_saved": 694
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "saved": 16,
+        "embedded": 430,
+        "total": 2555,
+        "new_embeddings_saved": 710
+      },
+      {
+        "document_id": 4,
+        "language": "Java",
+        "saved": 16,
+        "embedded": 2300,
+        "total": 3318,
+        "new_embeddings_saved": 726
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "saved": 16,
+        "embedded": 448,
+        "total": 2323,
+        "new_embeddings_saved": 742
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "saved": 16,
+        "embedded": 446,
+        "total": 1124,
+        "new_embeddings_saved": 758
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "saved": 16,
+        "embedded": 446,
+        "total": 2555,
+        "new_embeddings_saved": 774
+      },
+      {
+        "document_id": 4,
+        "language": "Java",
+        "saved": 16,
+        "embedded": 2316,
+        "total": 3318,
+        "new_embeddings_saved": 790
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "saved": 16,
+        "embedded": 464,
+        "total": 2323,
+        "new_embeddings_saved": 806
+      }
+    ],
+    "billing_changed": false,
+    "current": [
+      {
+        "document_id": 4,
+        "language": "Java",
+        "status": "partial",
+        "total_chunks": 3318,
+        "embedded_chunks": 2316,
+        "missing_embeddings": 1002,
+        "unverified_embeddings": 0,
+        "legacy_text_chunks": 3318,
+        "embedding_model": "gemini-embedding-001",
+        "embedding_dimensions": 768,
+        "provider_use_allowed": true,
+        "semantic_ready": false
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "status": "partial",
+        "total_chunks": 1124,
+        "embedded_chunks": 446,
+        "missing_embeddings": 678,
+        "unverified_embeddings": 0,
+        "legacy_text_chunks": 0,
+        "embedding_model": "gemini-embedding-001",
+        "embedding_dimensions": 768,
+        "provider_use_allowed": true,
+        "semantic_ready": false
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "status": "partial",
+        "total_chunks": 2323,
+        "embedded_chunks": 464,
+        "missing_embeddings": 1859,
+        "unverified_embeddings": 0,
+        "legacy_text_chunks": 0,
+        "embedding_model": "gemini-embedding-001",
+        "embedding_dimensions": 768,
+        "provider_use_allowed": true,
+        "semantic_ready": false
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "status": "partial",
+        "total_chunks": 2555,
+        "embedded_chunks": 446,
+        "missing_embeddings": 2109,
+        "unverified_embeddings": 0,
+        "legacy_text_chunks": 0,
+        "embedding_model": "gemini-embedding-001",
+        "embedding_dimensions": 768,
+        "provider_use_allowed": true,
+        "semantic_ready": false
+      }
+    ],
+    "elapsed_seconds": 1404.707,
+    "failure": {
+      "document_id": 5,
+      "error_type": "ClientError",
+      "code": 429,
+      "status": "RESOURCE_EXHAUSTED",
+      "quota": [
+        {
+          "quotaMetric": "generativelanguage.googleapis.com/embed_content_free_tier_requests",
+          "quotaId": "EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier",
+          "quotaValue": "1000"
+        }
+      ],
+      "retry_delay": "57521s"
+    }
+  },
+  "single_chunk_tail_run": {
+    "state": "quota_reached",
+    "new_embeddings_saved": 8,
+    "initial": [
+      {
+        "document_id": 4,
+        "language": "Java",
+        "status": "partial",
+        "total_chunks": 3318,
+        "embedded_chunks": 2316,
+        "missing_embeddings": 1002,
+        "unverified_embeddings": 0,
+        "legacy_text_chunks": 3318,
+        "embedding_model": "gemini-embedding-001",
+        "embedding_dimensions": 768,
+        "provider_use_allowed": true,
+        "semantic_ready": false
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "status": "partial",
+        "total_chunks": 1124,
+        "embedded_chunks": 446,
+        "missing_embeddings": 678,
+        "unverified_embeddings": 0,
+        "legacy_text_chunks": 0,
+        "embedding_model": "gemini-embedding-001",
+        "embedding_dimensions": 768,
+        "provider_use_allowed": true,
+        "semantic_ready": false
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "status": "partial",
+        "total_chunks": 2323,
+        "embedded_chunks": 464,
+        "missing_embeddings": 1859,
+        "unverified_embeddings": 0,
+        "legacy_text_chunks": 0,
+        "embedding_model": "gemini-embedding-001",
+        "embedding_dimensions": 768,
+        "provider_use_allowed": true,
+        "semantic_ready": false
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "status": "partial",
+        "total_chunks": 2555,
+        "embedded_chunks": 446,
+        "missing_embeddings": 2109,
+        "unverified_embeddings": 0,
+        "legacy_text_chunks": 0,
+        "embedding_model": "gemini-embedding-001",
+        "embedding_dimensions": 768,
+        "provider_use_allowed": true,
+        "semantic_ready": false
+      }
+    ],
+    "batch_size": 1,
+    "pace_seconds": 1.0,
+    "batches": [
+      {
+        "document_id": 5,
+        "language": "C",
+        "saved": 1,
+        "embedded": 447,
+        "total": 1124,
+        "new_embeddings_saved": 1
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "saved": 1,
+        "embedded": 465,
+        "total": 2323,
+        "new_embeddings_saved": 2
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "saved": 1,
+        "embedded": 447,
+        "total": 2555,
+        "new_embeddings_saved": 3
+      },
+      {
+        "document_id": 4,
+        "language": "Java",
+        "saved": 1,
+        "embedded": 2317,
+        "total": 3318,
+        "new_embeddings_saved": 4
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "saved": 1,
+        "embedded": 448,
+        "total": 1124,
+        "new_embeddings_saved": 5
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "saved": 1,
+        "embedded": 466,
+        "total": 2323,
+        "new_embeddings_saved": 6
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "saved": 1,
+        "embedded": 448,
+        "total": 2555,
+        "new_embeddings_saved": 7
+      },
+      {
+        "document_id": 4,
+        "language": "Java",
+        "saved": 1,
+        "embedded": 2318,
+        "total": 3318,
+        "new_embeddings_saved": 8
+      }
+    ],
+    "billing_changed": false,
+    "current": [
+      {
+        "document_id": 4,
+        "language": "Java",
+        "status": "partial",
+        "total_chunks": 3318,
+        "embedded_chunks": 2318,
+        "missing_embeddings": 1000,
+        "unverified_embeddings": 0,
+        "legacy_text_chunks": 3318,
+        "embedding_model": "gemini-embedding-001",
+        "embedding_dimensions": 768,
+        "provider_use_allowed": true,
+        "semantic_ready": false
+      },
+      {
+        "document_id": 5,
+        "language": "C",
+        "status": "partial",
+        "total_chunks": 1124,
+        "embedded_chunks": 448,
+        "missing_embeddings": 676,
+        "unverified_embeddings": 0,
+        "legacy_text_chunks": 0,
+        "embedding_model": "gemini-embedding-001",
+        "embedding_dimensions": 768,
+        "provider_use_allowed": true,
+        "semantic_ready": false
+      },
+      {
+        "document_id": 6,
+        "language": "C++",
+        "status": "partial",
+        "total_chunks": 2323,
+        "embedded_chunks": 466,
+        "missing_embeddings": 1857,
+        "unverified_embeddings": 0,
+        "legacy_text_chunks": 0,
+        "embedding_model": "gemini-embedding-001",
+        "embedding_dimensions": 768,
+        "provider_use_allowed": true,
+        "semantic_ready": false
+      },
+      {
+        "document_id": 7,
+        "language": "Python",
+        "status": "partial",
+        "total_chunks": 2555,
+        "embedded_chunks": 448,
+        "missing_embeddings": 2107,
+        "unverified_embeddings": 0,
+        "legacy_text_chunks": 0,
+        "embedding_model": "gemini-embedding-001",
+        "embedding_dimensions": 768,
+        "provider_use_allowed": true,
+        "semantic_ready": false
+      }
+    ],
+    "elapsed_seconds": 70.578,
+    "failure": {
+      "document_id": 5,
+      "error_type": "ClientError",
+      "code": 429,
+      "status": "RESOURCE_EXHAUSTED",
+      "quota": [
+        {
+          "quotaMetric": "generativelanguage.googleapis.com/embed_content_free_tier_requests",
+          "quotaId": "EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier",
+          "quotaValue": "1000"
+        }
+      ],
+      "retry_delay": "57403s"
+    }
+  },
+  "retry_hint_utc": "2026-10-23T06:59:59.450258+00:00",
+  "retry_hint_ist": "2026-10-23T12:29:59.450258+05:30",
+  "retry_hint_note": "Approximate provider retry hint, not a guaranteed reset time. No automatic retry scheduled.",
+  "backup_saved": true,
+  "all_existing_data_preserved": true,
+  "workers_running": false,
+  "models_changed": false,
+  "billing_changed": false,
+  "aws_resources_created": false,
+  "priority_pages": {
+    "6": [
+      240,
+      242,
+      469
+    ],
+    "5": [
+      77,
+      161
+    ],
+    "7": [
+      185,
+      186,
+      396,
+      549
+    ],
+    "4": [
+      493,
+      494,
+      546
+    ]
+  },
+  "api_readiness": {
+    "health_status": 200,
+    "library_status": 200,
+    "documents": 4,
+    "chunks": 9320,
+    "compatible_embeddings": 3680,
+    "semantic_ready_documents": 0,
+    "all_books_not_processing": true
+  }
+}

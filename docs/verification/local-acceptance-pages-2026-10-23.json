@@ -1,0 +1,210 @@
+[
+  {
+    "case": "cpp_default",
+    "document_id": 6,
+    "physical_page": 240,
+    "chunk_index": 881,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "cpp_default",
+    "document_id": 6,
+    "physical_page": 240,
+    "chunk_index": 883,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "c_calloc",
+    "document_id": 5,
+    "physical_page": 268,
+    "chunk_index": 900,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "c_calloc",
+    "document_id": 5,
+    "physical_page": 267,
+    "chunk_index": 895,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "java_hash",
+    "document_id": 4,
+    "physical_page": 253,
+    "chunk_index": 1017,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "java_hash",
+    "document_id": 4,
+    "physical_page": 257,
+    "chunk_index": 1032,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "python_defaults",
+    "document_id": 7,
+    "physical_page": 215,
+    "chunk_index": 806,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "python_defaults",
+    "document_id": 7,
+    "physical_page": 215,
+    "chunk_index": 808,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "cpp_member_order",
+    "document_id": 6,
+    "physical_page": 495,
+    "chunk_index": 1679,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "cpp_member_order",
+    "document_id": 6,
+    "physical_page": 599,
+    "chunk_index": 2007,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "cpp_member_order",
+    "document_id": 6,
+    "physical_page": 62,
+    "chunk_index": 358,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "cpp_member_order",
+    "document_id": 6,
+    "physical_page": 151,
+    "chunk_index": 617,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "python_mutable_in_tuple",
+    "document_id": 7,
+    "physical_page": 186,
+    "chunk_index": 730,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "negative_injection",
+    "document_id": 6,
+    "physical_page": 602,
+    "chunk_index": 2016,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "cpp_basics_all",
+    "document_id": 6,
+    "physical_page": 240,
+    "chunk_index": 881,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "cpp_basics_all",
+    "document_id": 6,
+    "physical_page": 242,
+    "chunk_index": 888,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "java_strings_all",
+    "document_id": 4,
+    "physical_page": 77,
+    "chunk_index": 467,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "python_tuples_all",
+    "document_id": 7,
+    "physical_page": 59,
+    "chunk_index": 398,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "python_tuples_all",
+    "document_id": 7,
+    "physical_page": 186,
+    "chunk_index": 730,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "python_tuples_all",
+    "document_id": 7,
+    "physical_page": 42,
+    "chunk_index": 349,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "new_c_failure",
+    "document_id": 5,
+    "physical_page": 268,
+    "chunk_index": 902,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "new_c_failure",
+    "document_id": 5,
+    "physical_page": 270,
+    "chunk_index": 909,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "new_c_failure",
+    "document_id": 5,
+    "physical_page": 330,
+    "chunk_index": 1090,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "new_c_failure",
+    "document_id": 5,
+    "physical_page": 267,
+    "chunk_index": 897,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "new_python_singleton",
+    "document_id": 7,
+    "physical_page": 42,
+    "chunk_index": 350,
+    "metadata_valid": true,
+    "original_page_verified": true
+  },
+  {
+    "case": "new_python_singleton",
+    "document_id": 7,
+    "physical_page": 185,
+    "chunk_index": 728,
+    "metadata_valid": true,
+    "original_page_verified": true
+  }
+]

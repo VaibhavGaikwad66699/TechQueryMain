@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "positive_cases": 3,
+  "unsupported_cases": 3,
+  "no_provider_calls": true,
+  "cases": [
+    {
+      "language": "C",
+      "question": "How do malloc and free manage dynamically allocated memory in C?",
+      "retrieval_passed": true,
+      "all_sources_stayed_in_language": true,
+      "top_source_pdf_page": 268,
+      "supporting_anchors_on_independent_pypdf_page": [
+        "freeing memory",
+        "dynamically allocated memory"
+      ],
+      "top_chunk_contained_on_independent_page": true,
+      "source_excerpt_mode_confirmed": true,
+      "unsupported_question_abstained": true,
+      "check_seconds": 2.468
+    },
+    {
+      "language": "C++",
+      "question": "How does RAII use constructors and destructors for resource management in C++?",
+      "retrieval_passed": true,
+      "all_sources_stayed_in_language": true,
+      "top_source_pdf_page": 651,
+      "supporting_anchors_on_independent_pypdf_page": [
+        "resource acquisition is initialization",
+        "raii"
+      ],
+      "top_chunk_contained_on_independent_page": true,
+      "source_excerpt_mode_confirmed": true,
+      "unsupported_question_abstained": true,
+      "check_seconds": 2.226
+    },
+    {
+      "language": "Python",
+      "question": "What is the difference between lists and tuples in Python?",
+      "retrieval_passed": true,
+      "all_sources_stayed_in_language": true,
+      "top_source_pdf_page": 186,
+      "supporting_anchors_on_independent_pypdf_page": [
+        "tuples are immutable",
+        "lists and tuples"
+      ],
+      "top_chunk_contained_on_independent_page": true,
+      "source_excerpt_mode_confirmed": true,
+      "unsupported_question_abstained": true,
+      "check_seconds": 3.205
+    }
+  ],
+  "limitations": "Small local lexical smoke, not full retrieval accuracy or generated-answer validation. Visual checks use physical PDF pages C 268, C++ 651 and Python 186; printed page labels differ. Historical examples/version support still need review."
+}

@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "original_documents_preserved": 4,
+  "original_source_chunks_preserved": 3330,
+  "original_subjects_preserved": true,
+  "documents": [
+    {
+      "id": 1,
+      "subject": "Java"
+    },
+    {
+      "id": 2,
+      "subject": "Operating Systems"
+    },
+    {
+      "id": 3,
+      "subject": "DBMS"
+    },
+    {
+      "id": 4,
+      "subject": "Java"
+    }
+  ],
+  "no_provider_calls": true
+}

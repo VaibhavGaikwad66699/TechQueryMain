@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "original_source_chunk_id_content_page_token_and_created_fields_preserved": 9332,
+  "previous_stored_vectors_preserved_including_legacy": 1912,
+  "existing_document_identity_fields_preserved": 7,
+  "stored_pdf_hashes_preserved": 7,
+  "source_book_hashes_preserved": 4,
+  "approved_chunk_audits_verified": 6002,
+  "allowed_changes": [
+    "new compatible embeddings/provenance",
+    "explicit provider authorization",
+    "document progress/status/error messages"
+  ]
+}

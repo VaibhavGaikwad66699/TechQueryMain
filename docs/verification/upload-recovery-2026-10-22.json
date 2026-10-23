@@ -1,0 +1,249 @@
+{
+  "backend_tests": {
+    "tests": 173,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "frontend_tests": {
+    "tests": 10,
+    "failures": 0
+  },
+  "frontend_production_build": "passed",
+  "parser_benchmark": {
+    "provider_calls": 0,
+    "source_unchanged": true,
+    "engine": "pdftotext",
+    "first_500_pages_seconds": 19.884,
+    "saved_pages_before_resume": 500,
+    "published_chunks_before_resume": 0,
+    "recovered_jobs": 1,
+    "resume_seconds": 18.205,
+    "resume_start_pages": [
+      501
+    ],
+    "total_pages": 982,
+    "total_chunks": 3303,
+    "saved_pages_after_resume": 982,
+    "complete": true,
+    "status": "partial"
+  },
+  "preservation": {
+    "checked_at": "2026-10-22T15:49:25.002094+00:00",
+    "tables": {
+      "users": {
+        "rows": 2,
+        "all_fields_identical": true
+      },
+      "user_preferences": {
+        "rows": 2,
+        "all_fields_identical": true
+      },
+      "documents": {
+        "rows": 4,
+        "all_fields_identical": true
+      },
+      "conversations": {
+        "rows": 2,
+        "all_fields_identical": true
+      },
+      "document_chunks": {
+        "rows": 9320,
+        "all_fields_identical": true
+      },
+      "messages": {
+        "rows": 8,
+        "all_fields_identical": true
+      },
+      "user_subjects": {
+        "rows": 0,
+        "all_fields_identical": true
+      },
+      "library_migrations": {
+        "rows": 1,
+        "all_fields_identical": true
+      }
+    },
+    "pdfs": {
+      "33875594b9c64771bf94c75623727561_CPlusPlusNotesForProfessionals.pdf": {
+        "preserved": true,
+        "source_original_preserved": true
+      },
+      "64fc5f83816e459198fcddc0ef4d7b9b_CNotesForProfessionals.pdf": {
+        "preserved": true,
+        "source_original_preserved": true
+      },
+      "8ee9871f_JavaNotesForProfessionals.pdf": {
+        "preserved": true,
+        "source_original_preserved": true
+      },
+      "d197f426ed2642e7ae417955fcce1575_PythonNotesForProfessionals.pdf": {
+        "preserved": true,
+        "source_original_preserved": true
+      }
+    },
+    "pdf_count": 4,
+    "compatible_embeddings": 3680,
+    "missing_embeddings": 5640,
+    "new_tables": {
+      "extraction_checkpoints": 0,
+      "extraction_pages": 0
+    },
+    "all_preserved": true
+  },
+  "running_api": {
+    "health": {
+      "status": "online",
+      "app_name": "TechQuery \u2014 AI-Based Technical Knowledge Assistant",
+      "version": "1.0.0",
+      "supported_languages": [
+        "C",
+        "C++",
+        "Java",
+        "Python"
+      ],
+      "limits": {
+        "max_pdf_bytes": 52428800,
+        "max_question_characters": 4000
+      },
+      "database": {
+        "status": "connected",
+        "type": "SQLite",
+        "total_documents": 4,
+        "in_scope_documents": 4,
+        "total_indexed_chunks": 9320,
+        "total_embedded_chunks": 3680,
+        "semantic_ready_documents": 0,
+        "unverified_embeddings": 0
+      },
+      "gemini": {
+        "configured": true,
+        "model": "gemini-3.5-flash-lite",
+        "embedding_model": "gemini-embedding-001",
+        "availability": "not_checked",
+        "instructions": "Key configured; provider availability is not checked by this endpoint."
+      }
+    },
+    "documents": [
+      {
+        "id": 7,
+        "subject": "Python",
+        "status": "partial",
+        "total_pages": 856,
+        "total_chunks": 2555,
+        "indexing": {
+          "total_chunks": 2555,
+          "embedded_chunks": 448,
+          "extraction": {
+            "total_pages": 856,
+            "saved_pages": 856,
+            "complete": true,
+            "extractor": null
+          },
+          "missing_embeddings": 2107,
+          "unverified_embeddings": 0,
+          "legacy_text_chunks": 0,
+          "embedding_model": "gemini-embedding-001",
+          "embedding_dimensions": 768,
+          "provider_use_allowed": true,
+          "semantic_ready": false
+        },
+        "processing_active": false
+      },
+      {
+        "id": 6,
+        "subject": "C++",
+        "status": "partial",
+        "total_pages": 708,
+        "total_chunks": 2323,
+        "indexing": {
+          "total_chunks": 2323,
+          "embedded_chunks": 466,
+          "extraction": {
+            "total_pages": 708,
+            "saved_pages": 708,
+            "complete": true,
+            "extractor": null
+          },
+          "missing_embeddings": 1857,
+          "unverified_embeddings": 0,
+          "legacy_text_chunks": 0,
+          "embedding_model": "gemini-embedding-001",
+          "embedding_dimensions": 768,
+          "provider_use_allowed": true,
+          "semantic_ready": false
+        },
+        "processing_active": false
+      },
+      {
+        "id": 5,
+        "subject": "C",
+        "status": "partial",
+        "total_pages": 342,
+        "total_chunks": 1124,
+        "indexing": {
+          "total_chunks": 1124,
+          "embedded_chunks": 448,
+          "extraction": {
+            "total_pages": 342,
+            "saved_pages": 342,
+            "complete": true,
+            "extractor": null
+          },
+          "missing_embeddings": 676,
+          "unverified_embeddings": 0,
+          "legacy_text_chunks": 0,
+          "embedding_model": "gemini-embedding-001",
+          "embedding_dimensions": 768,
+          "provider_use_allowed": true,
+          "semantic_ready": false
+        },
+        "processing_active": false
+      },
+      {
+        "id": 4,
+        "subject": "Java",
+        "status": "partial",
+        "total_pages": 982,
+        "total_chunks": 3318,
+        "indexing": {
+          "total_chunks": 3318,
+          "embedded_chunks": 2318,
+          "extraction": {
+            "total_pages": 982,
+            "saved_pages": 982,
+            "complete": true,
+            "extractor": null
+          },
+          "missing_embeddings": 1000,
+          "unverified_embeddings": 0,
+          "legacy_text_chunks": 3318,
+          "embedding_model": "gemini-embedding-001",
+          "embedding_dimensions": 768,
+          "provider_use_allowed": true,
+          "semantic_ready": false
+        },
+        "processing_active": false
+      }
+    ]
+  },
+  "browser": {
+    "guest_library_books": 4,
+    "desktop_library_observed": true,
+    "narrow_viewport": {
+      "width": 375,
+      "document_scroll_width": 375
+    },
+    "personal_checkpoint_ui": "API/background behavior tested in isolated fixtures; no temporary live account created",
+    "actual_devices_verified": false
+  },
+  "provider_calls_this_task": 0,
+  "cloud_resources_created": 0,
+  "limits": [
+    "Single API process and local disk",
+    "No OCR",
+    "No upload-byte resume",
+    "Conflicting journals require operator review",
+    "Parser output/time limits are not OS memory caps"
+  ]
+}

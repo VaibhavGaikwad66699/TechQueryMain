@@ -1,0 +1,219 @@
+{
+  "date": "2026-10-20",
+  "scope": "Isolated app at 127.0.0.1:5174, real FastAPI/SQLite at 8001, self-authored PDF fixtures, Gemini disabled",
+  "browser": "Codex in-app Chromium browser; viewport testing, not physical devices",
+  "viewports": [
+    {
+      "view": "library",
+      "width": 320,
+      "height": 568,
+      "clientWidth": 320,
+      "scrollWidth": 320
+    },
+    {
+      "view": "library",
+      "width": 768,
+      "height": 1024,
+      "clientWidth": 768,
+      "scrollWidth": 768
+    },
+    {
+      "view": "chat",
+      "width": 320,
+      "height": 568,
+      "clientWidth": 320,
+      "headerClientWidth": 320,
+      "headerScrollWidth": 320,
+      "inputVisible": true,
+      "scrollWidth": 320
+    },
+    {
+      "view": "chat",
+      "width": 375,
+      "height": 667,
+      "clientWidth": 375,
+      "headerClientWidth": 375,
+      "headerScrollWidth": 375,
+      "inputVisible": true,
+      "scrollWidth": 375
+    },
+    {
+      "view": "chat",
+      "width": 390,
+      "height": 844,
+      "clientWidth": 390,
+      "headerClientWidth": 390,
+      "headerScrollWidth": 390,
+      "inputVisible": true,
+      "scrollWidth": 390
+    },
+    {
+      "view": "chat",
+      "width": 768,
+      "height": 1024,
+      "clientWidth": 768,
+      "headerClientWidth": 768,
+      "headerScrollWidth": 768,
+      "inputVisible": true,
+      "scrollWidth": 768
+    },
+    {
+      "view": "chat",
+      "width": 1024,
+      "height": 768,
+      "clientWidth": 1024,
+      "headerClientWidth": 1024,
+      "headerScrollWidth": 1024,
+      "inputVisible": true,
+      "scrollWidth": 1024
+    },
+    {
+      "view": "chat",
+      "width": 1280,
+      "height": 800,
+      "clientWidth": 1280,
+      "headerClientWidth": 1280,
+      "headerScrollWidth": 1280,
+      "inputVisible": true,
+      "scrollWidth": 1280
+    },
+    {
+      "view": "chat",
+      "width": 1440,
+      "height": 900,
+      "clientWidth": 1440,
+      "headerClientWidth": 1440,
+      "headerScrollWidth": 1440,
+      "inputVisible": true,
+      "scrollWidth": 1440
+    },
+    {
+      "view": "chat",
+      "width": 1920,
+      "height": 1080,
+      "clientWidth": 1920,
+      "headerClientWidth": 1920,
+      "headerScrollWidth": 1920,
+      "inputVisible": true,
+      "scrollWidth": 1920
+    },
+    {
+      "view": "chat",
+      "width": 812,
+      "height": 375,
+      "clientWidth": 812,
+      "headerClientWidth": 812,
+      "headerScrollWidth": 812,
+      "inputVisible": true,
+      "scrollWidth": 812
+    },
+    {
+      "view": "library",
+      "width": 320,
+      "height": 568,
+      "clientWidth": 320,
+      "headerClientWidth": 320,
+      "headerScrollWidth": 320,
+      "scrollWidth": 320
+    },
+    {
+      "view": "library",
+      "width": 375,
+      "height": 667,
+      "clientWidth": 375,
+      "headerClientWidth": 375,
+      "headerScrollWidth": 375,
+      "scrollWidth": 375
+    },
+    {
+      "view": "library",
+      "width": 390,
+      "height": 844,
+      "clientWidth": 390,
+      "headerClientWidth": 390,
+      "headerScrollWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "view": "library",
+      "width": 768,
+      "height": 1024,
+      "clientWidth": 768,
+      "headerClientWidth": 768,
+      "headerScrollWidth": 768,
+      "scrollWidth": 768
+    },
+    {
+      "view": "library",
+      "width": 1024,
+      "height": 768,
+      "clientWidth": 1024,
+      "headerClientWidth": 1024,
+      "headerScrollWidth": 1024,
+      "scrollWidth": 1024
+    },
+    {
+      "view": "library",
+      "width": 1280,
+      "height": 800,
+      "clientWidth": 1280,
+      "headerClientWidth": 1280,
+      "headerScrollWidth": 1280,
+      "scrollWidth": 1280
+    },
+    {
+      "view": "library",
+      "width": 1440,
+      "height": 900,
+      "clientWidth": 1440,
+      "headerClientWidth": 1440,
+      "headerScrollWidth": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "view": "library",
+      "width": 1920,
+      "height": 1080,
+      "clientWidth": 1920,
+      "headerClientWidth": 1920,
+      "headerScrollWidth": 1920,
+      "scrollWidth": 1920
+    },
+    {
+      "view": "library",
+      "width": 812,
+      "height": 375,
+      "clientWidth": 812,
+      "headerClientWidth": 812,
+      "headerScrollWidth": 812,
+      "scrollWidth": 812
+    }
+  ],
+  "checks": {
+    "guest_source_excerpts": "passed",
+    "unsupported_abstention_without_followups": "passed",
+    "registration_login_logout": "passed",
+    "first_conversation_answer_and_history_reload": "passed",
+    "preferences_saved_and_restored": "passed",
+    "long_input_4001_blocked": "passed",
+    "mobile_drawer_and_library_chat_navigation": "passed",
+    "question_subject_filter": "passed",
+    "sample_question_subject_selection": "passed; Java sample switches Python filter to Java; fixture has no supporting code example so correctly abstains",
+    "document_subject_filter": "passed",
+    "upload_processing_partial_polling": "passed",
+    "explicit_resume": "passed",
+    "idle_polling_stop": "passed; document-list request count remained 5 across two idle checks",
+    "owner_nonowner_controls": "passed",
+    "temporary_outage_preserves_draft": "passed",
+    "landscape_preferences_footer_visible": "passed at 812x375",
+    "pdf_link": "Correct physical-page URL; inline HTTP bytes verified. The embedded browser showed no PDF page content, so viewer page-jump remains unverified."
+  },
+  "untested": [
+    "physical devices and virtual keyboards",
+    "Safari/WebKit and Firefox",
+    "final browser confirmation for destructive delete (backend delete covered by existing tests)",
+    "fresh live generated answer and semantic embedding in this pass",
+    "full-book semantic retrieval and held-out generation quality"
+  ],
+  "result": "core local flows passed; listed acceptance limits remain"
+}

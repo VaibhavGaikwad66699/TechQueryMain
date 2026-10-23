@@ -1,0 +1,216 @@
+{
+  "acceptance": "review_required",
+  "deployment_started": false,
+  "aws_changes": false,
+  "preservation": {
+    "users": {
+      "rows": 3,
+      "all_fields_identical": true
+    },
+    "user_preferences": {
+      "rows": 3,
+      "all_fields_identical": true
+    },
+    "documents": {
+      "rows": 4,
+      "all_fields_identical": true
+    },
+    "conversations": {
+      "rows": 3,
+      "all_fields_identical": true
+    },
+    "document_chunks": {
+      "rows": 9320,
+      "all_fields_identical": true
+    },
+    "messages": {
+      "rows": 10,
+      "all_fields_identical": true
+    },
+    "user_subjects": {
+      "rows": 0,
+      "all_fields_identical": true
+    },
+    "library_migrations": {
+      "rows": 1,
+      "all_fields_identical": true
+    },
+    "extraction_checkpoints": {
+      "rows": 0,
+      "all_fields_identical": true
+    },
+    "extraction_pages": {
+      "rows": 0,
+      "all_fields_identical": true
+    }
+  },
+  "pdfs": [
+    {
+      "subject": "C++",
+      "stored_preserved": true,
+      "source_preserved": true
+    },
+    {
+      "subject": "C",
+      "stored_preserved": true,
+      "source_preserved": true
+    },
+    {
+      "subject": "Java",
+      "stored_preserved": true,
+      "source_preserved": true
+    },
+    {
+      "subject": "Python",
+      "stored_preserved": true,
+      "source_preserved": true
+    }
+  ],
+  "browser": {
+    "status": "blocked",
+    "reason": "Local browser use is disabled in Work settings. Three permitted attempts returned the same setting gate.",
+    "fresh_desktop_mobile_visual_checks": false,
+    "pdf_viewer_and_page_jumps": false,
+    "actual_device_checks": false
+  },
+  "all_saved_data_preserved": true,
+  "index": {
+    "total_chunks": 9320,
+    "compatible_embeddings": 3680,
+    "missing_embeddings": 5640,
+    "index_modified": false
+  },
+  "live_original_page_checks": {
+    "checked": 26,
+    "passed": 26
+  },
+  "offline_retrieval": {
+    "questions": 38,
+    "page_checks": 145,
+    "passed": 145
+  },
+  "live_answers": {
+    "tested": 14,
+    "generated": 10,
+    "unsupported_correctly_abstained": 3,
+    "expected_supported_abstentions": [
+      "cpp_member_order"
+    ],
+    "provider_fallbacks": 0,
+    "review_notes": {
+      "cpp_member_order": "Remains unanswered. Expected source support needs confirmation; direct original-book scan did not establish a clear member-declaration-order explanation. Do not label this proof of a retrieval bug.",
+      "java_strings_all": "Immutability explanation is correct, but claiming conversion always returns new String instances is too strong. OpenJDK can return this when unchanged.",
+      "python_tuples_all": "Mutability contrast is correct. Parentheses wording is too broad; commas create non-empty tuple expression lists.",
+      "cpp_default": "Basic no-required-arguments definition is present; default-argument/deleted-constructor edge cases are not comprehensively validated.",
+      "private_short_query": "In the offline synthetic private fixture, a short acceptance-marker question abstained while a more specific reference paraphrase retrieved the owner PDF. Private-subject paraphrase recall needs broader acceptance; no cross-user exposure occurred."
+    },
+    "sources_for_review": [
+      "https://raw.githubusercontent.com/openjdk/jdk8u/master/jdk/src/share/classes/java/lang/String.java",
+      "https://docs.python.org/3/reference/expressions.html#expression-lists"
+    ]
+  },
+  "http_workflows": {
+    "provider_calls": 0,
+    "isolated_data": true,
+    "checks": {
+      "built_frontend_served_http_only": true,
+      "registration_login_invalid_credentials": true,
+      "new_accounts_receive_four_shared_defaults": true,
+      "same_subject_name_isolated_and_owner_duplicate_rejected": true,
+      "upload_process_and_repeat_resume_preserve_chunks": true,
+      "owner_pdf_bytes_and_outsider_isolation": true,
+      "preference_persistence_private_rag_and_history": true,
+      "fallback_is_labelled_source_excerpts": true,
+      "subject_deletion_resets_preference_preserves_history_and_other_account": true,
+      "invalid_pdf_rejected": true,
+      "large_pdf_upload_and_processing": {
+        "bytes": 51381433,
+        "seconds": 2.319,
+        "status": "partial"
+      },
+      "oversized_pdf_rejected_without_record": true,
+      "single_book_delete_keeps_subject": true,
+      "history_deletion": true
+    },
+    "passed": true
+  },
+  "restart_persistence": {
+    "preferences_persisted": true,
+    "history_and_citations_persisted": true,
+    "private_pdf_bytes_preserved": true,
+    "fresh_login_after_restart": true,
+    "provider_calls": 0
+  },
+  "large_book_resume": {
+    "provider_calls": 0,
+    "source_unchanged": true,
+    "engine": "pdftotext",
+    "first_500_pages_seconds": 20.913,
+    "saved_pages_before_resume": 500,
+    "published_chunks_before_resume": 0,
+    "recovered_jobs": 1,
+    "resume_seconds": 18.229,
+    "resume_start_pages": [
+      501
+    ],
+    "total_pages": 982,
+    "total_chunks": 3303,
+    "saved_pages_after_resume": 982,
+    "complete": true,
+    "status": "partial"
+  },
+  "unusual_metadata_pdf": {
+    "bytes": 51380224,
+    "note": "A separate synthetic PDF with about 49 MiB of metadata hit the configured parser timeout, returned a recoverable error state, and did not block HTTP readiness. It is not the valid binary-attachment upload pass."
+  },
+  "previous_local_bundles_reverified": {
+    "private-backup": {
+      "conversations": 3,
+      "document_chunks": 9320,
+      "documents": 4,
+      "extraction_checkpoints": 0,
+      "extraction_pages": 0,
+      "messages": 10,
+      "user_preferences": 3,
+      "user_subjects": 0,
+      "users": 3,
+      "stored_embeddings": 3680
+    },
+    "default-library": {
+      "conversations": 0,
+      "document_chunks": 9320,
+      "documents": 4,
+      "extraction_checkpoints": 0,
+      "extraction_pages": 0,
+      "messages": 0,
+      "user_preferences": 0,
+      "user_subjects": 0,
+      "users": 0,
+      "stored_embeddings": 3680
+    },
+    "restored-private": {
+      "conversations": 3,
+      "document_chunks": 9320,
+      "documents": 4,
+      "extraction_checkpoints": 0,
+      "extraction_pages": 0,
+      "messages": 10,
+      "user_preferences": 3,
+      "user_subjects": 0,
+      "users": 3,
+      "stored_embeddings": 3680
+    }
+  },
+  "backend_tests": {
+    "tests": 195,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "frontend": {
+    "client_tests_passed": 10,
+    "production_build_passed": true,
+    "browser_visual_acceptance_completed": false
+  },
+  "product_changes": "None; acceptance scripts, evidence and status documentation only."
+}

@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "api_ready": true,
+  "frontend_proxy_subjects_verified": true,
+  "supported_languages": [
+    "C",
+    "C++",
+    "Java",
+    "Python"
+  ],
+  "library_documents": 4,
+  "in_scope_documents": 2,
+  "retained_outside_scope_documents": 2,
+  "no_index_jobs_active": true,
+  "unsupported_language_abstained": true,
+  "unindexed_python_abstained": true,
+  "unsupported_filters_rejected": true,
+  "original_pdf_download_bytes_verified": 4,
+  "no_provider_calls": true
+}

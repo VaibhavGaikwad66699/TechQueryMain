@@ -1,0 +1,12 @@
+{
+  "result": "passed",
+  "scope": "isolated backend after intentional restart; no original library access; Gemini disabled",
+  "documents_preserved": 2,
+  "chunks_per_document": 2,
+  "conversations_preserved": 2,
+  "preferences_persisted": true,
+  "exact_inline_pdf_bytes": true,
+  "owner_vs_nonowner_flags": true,
+  "provider_configured": false,
+  "pdf_sha256": "ba1765f2503529fa697b6549e43ea59e7ecb2328760c60eed92a2f0a3fedd2de"
+}

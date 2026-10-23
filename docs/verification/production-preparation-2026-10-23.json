@@ -1,0 +1,145 @@
+{
+  "local_private_backup_verified": true,
+  "private_restore_verified": true,
+  "default_dataset": {
+    "summary": {
+      "conversations": 0,
+      "document_chunks": 9320,
+      "documents": 4,
+      "extraction_checkpoints": 0,
+      "extraction_pages": 0,
+      "messages": 0,
+      "user_preferences": 0,
+      "user_subjects": 0,
+      "users": 0,
+      "stored_embeddings": 3680
+    },
+    "index_complete": false,
+    "missing_embeddings": 5640,
+    "all_files_verified": true
+  },
+  "preservation": {
+    "users": {
+      "rows": 3,
+      "all_fields_identical": true
+    },
+    "user_preferences": {
+      "rows": 3,
+      "all_fields_identical": true
+    },
+    "documents": {
+      "rows": 4,
+      "all_fields_identical": true
+    },
+    "conversations": {
+      "rows": 3,
+      "all_fields_identical": true
+    },
+    "document_chunks": {
+      "rows": 9320,
+      "all_fields_identical": true
+    },
+    "messages": {
+      "rows": 10,
+      "all_fields_identical": true
+    },
+    "user_subjects": {
+      "rows": 0,
+      "all_fields_identical": true
+    },
+    "library_migrations": {
+      "rows": 1,
+      "all_fields_identical": true
+    },
+    "extraction_checkpoints": {
+      "rows": 0,
+      "all_fields_identical": true
+    },
+    "extraction_pages": {
+      "rows": 0,
+      "all_fields_identical": true
+    }
+  },
+  "dataset_identity": {
+    "all_text_pages_ids_vectors_preserved": true,
+    "embedding_provenance_preserved": true,
+    "no_local_account_credentials_or_emails": true,
+    "compatible_vectors": 3680
+  },
+  "pdfs": [
+    {
+      "subject": "C",
+      "stored_pdf_preserved": true,
+      "source_pdf_preserved": true,
+      "dataset_pdf_matches": true
+    },
+    {
+      "subject": "C++",
+      "stored_pdf_preserved": true,
+      "source_pdf_preserved": true,
+      "dataset_pdf_matches": true
+    },
+    {
+      "subject": "Java",
+      "stored_pdf_preserved": true,
+      "source_pdf_preserved": true,
+      "dataset_pdf_matches": true
+    },
+    {
+      "subject": "Python",
+      "stored_pdf_preserved": true,
+      "source_pdf_preserved": true,
+      "dataset_pdf_matches": true
+    }
+  ],
+  "all_live_data_preserved": true,
+  "deployment_files": {
+    "yaml_parsed": true,
+    "api_not_published": true,
+    "secrets_are_file_mounts": true,
+    "persistent_data_and_backup_volumes": true,
+    "container_build_verified": false,
+    "compose_engine_verified": false,
+    "caddy_execution_verified": false,
+    "docker_available": false,
+    "reason": "Docker/Compose is not installed on this machine"
+  },
+  "production_http_smoke": {
+    "network_scope": "loopback only",
+    "provider_calls": 0,
+    "cloud_resources": 0,
+    "checks": {
+      "production_frontend_served": true,
+      "built_assets_served": true,
+      "unknown_api_not_spa": true,
+      "api_docs_disabled": true,
+      "untrusted_host_blocked": true,
+      "default_books": 4,
+      "chunks": 9320,
+      "compatible_embeddings": 3680,
+      "registration_never_admin": true,
+      "private_upload_download": true,
+      "outsider_download_denied": true,
+      "default_mutation_denied": true,
+      "private_deletion": true,
+      "maintenance_refuses_running_api": true,
+      "google_configured_for_smoke": false
+    },
+    "passed": true
+  },
+  "backend_tests": {
+    "tests": 195,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "frontend_tests": {
+    "passed": 10,
+    "failed": 0,
+    "production_build": "passed"
+  },
+  "provider_calls": 0,
+  "paid_cloud_resources_created": 0,
+  "domain_and_https_configured": false,
+  "production_secrets_generated_and_ignored": true
+}

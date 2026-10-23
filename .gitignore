@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.sqlite3
+*.db
+
+# Node / Frontend
+node_modules/
+dist/
+.vite/
+*.local
+
+# TechQuery local data (keep sample documents tracked if any, ignore user uploads)
+data/documents/*
+!data/documents/.gitkeep
+data/*.db
+data/*.sqlite
+data/*.lock
+*.lock
+
+# Environment variables
+.env
+.env.local
+.env.*
+!.env.example
+
+# Private source books, runtime output, and local backups
+source_book/
+*.pdf
+*.db-*
+*.sqlite-*
+*.sqlite3-*
+.pytest_cache/
+.local/
+artifacts/
+deploy/control.env
+deploy/production.env
+deploy/secrets/
+
+# Allow verified deployment seed library
+!deploy/seed/
+!deploy/seed/**

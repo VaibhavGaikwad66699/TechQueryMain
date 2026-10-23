@@ -1,0 +1,14 @@
+{
+  "scope": "Manual claim-to-evidence review of the four generated answers from the frozen seven-case set; not a broad fact checker",
+  "model": "gemini-3.5-flash-lite",
+  "claim_faithfulness_cases_passed": 4,
+  "supported_cases": 4,
+  "technical_quality_clean_cases": 3,
+  "technical_quality_caveat_cases": 1,
+  "caveat": {
+    "case": "transient_thread_serialization",
+    "note": "The constructor answer repeats the source book\u2019s imprecise no-new-object explanation. Do not treat source fidelity as proof of external technical correctness. Serializable and non-serializable superclass constructor behavior requires more precise qualification.",
+    "reference": "https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html"
+  },
+  "corpus_comparison_note": "Embedding coverage grew during background backfill. Old/new model runs share frozen questions but not an identical semantic-index snapshot; this is not a controlled model-quality ranking."
+}

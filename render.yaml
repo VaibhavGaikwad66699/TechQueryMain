@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: techquery
+    runtime: docker
+    plan: free
+    region: oregon
+    healthCheckPath: /api/v1/ready
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: ENVIRONMENT
+        value: production
+      - key: SERVE_FRONTEND
+        value: "true"
+      - key: FRONTEND_DIST
+        value: /app/frontend/dist
+      - key: DATABASE_URL
+        value: sqlite:////data/techquery.db
+      - key: DOCUMENTS_DIR
+        value: /data/documents
+      - key: MAX_INGESTION_JOBS
+        value: "1"
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash-lite
+      - key: EMBEDDING_MODEL
+        value: gemini-embedding-001
+      - key: EMBEDDING_DIMENSIONS
+        value: "768"
+      - key: INDEX_MAX_CHUNKS_PER_REQUEST
+        value: "16"
+      - key: MAX_PDF_BYTES
+        value: "52428800"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false

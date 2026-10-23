@@ -1,0 +1,74 @@
+{
+  "checked_at": "2026-10-21T17:55:46.961619+00:00",
+  "temporary_data": "One synthetic Biology QA book in a temporary QA account; removed after verification.",
+  "synthetic_upload": {
+    "status": "ready",
+    "pages": 1,
+    "chunks": 1,
+    "embedded_chunks": 1,
+    "is_default": false
+  },
+  "owner_pdf_bytes_verified": true,
+  "guest_private_document_status": 404,
+  "guest_private_pdf_status": 404,
+  "live_custom_subject_answer": {
+    "response_mode": "generated",
+    "retrieval_mode": "semantic",
+    "source_subject": "Biology QA",
+    "source_pages": [
+      1
+    ],
+    "all_sources_from_owner_book": true,
+    "saved_preferences_verified": true
+  },
+  "tests": {
+    "backend_passed": 123,
+    "frontend_passed": 8,
+    "production_build": "passed",
+    "provider_unit_tests": "mocked; browser answer and synthetic book embedding used live Gemini"
+  },
+  "responsive": {
+    "library_widths_without_horizontal_overflow": [
+      320,
+      375,
+      768
+    ],
+    "chat_375_input_visible": true,
+    "not_established": [
+      "Physical devices",
+      "Safari/Firefox acceptance",
+      "Real mobile keyboard behavior",
+      "PDF viewer rendering/page jumps in a full browser"
+    ]
+  },
+  "pdf_action": "Authenticated bytes and client page fragment tested; in-app browser did not establish PDF viewer rendering.",
+  "temporary_fixtures_removed": true,
+  "preservation": {
+    "all_previous_rows_identical_except_added_default_flag": true,
+    "row_counts": {
+      "users": 2,
+      "user_preferences": 2,
+      "conversations": 2,
+      "messages": 8,
+      "document_chunks": 9320,
+      "documents": 4
+    },
+    "four_original_pdf_hashes_unchanged": true,
+    "default_document_ids": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "default_compatible_embeddings": 2866,
+    "default_missing_embeddings": 6454,
+    "four_source_folder_pdf_hashes_match_approved_originals": true
+  },
+  "aws_resources_created": false,
+  "source_pdf_files_preserved": true,
+  "browser_logout_verified": {
+    "private_subject_removed": true,
+    "private_book_removed": true,
+    "guest_default_books": 4
+  }
+}

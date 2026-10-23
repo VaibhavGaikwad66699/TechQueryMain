@@ -1,0 +1,63 @@
+name: techquery
+services:
+  app:
+    image: techquery:${RELEASE_TAG:-local}
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    env_file:
+      - ${PRODUCTION_ENV_FILE:?Set PRODUCTION_ENV_FILE to the prepared production.env}
+    secrets:
+      - jwt_secret
+      - gemini_api_key
+    volumes:
+      - app_data:/data
+      - app_backups:/backups
+      - type: bind
+        source: ${DATASET_PATH:?Set DATASET_PATH to a verified default-library bundle}
+        target: /seed
+        read_only: true
+    expose:
+      - "8000"
+    restart: unless-stopped
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=128m
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 2g
+    cpus: 1.5
+    stop_grace_period: 100s
+    logging:
+      driver: json-file
+      options: {max-size: 10m, max-file: "3"}
+  edge:
+    image: caddy:2-alpine
+    environment:
+      SITE_ADDRESS: ${SITE_ADDRESS:?Set SITE_ADDRESS to the real domain}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      app: {condition: service_healthy}
+    restart: unless-stopped
+    security_opt: [no-new-privileges:true]
+    logging:
+      driver: json-file
+      options: {max-size: 10m, max-file: "3"}
+secrets:
+  jwt_secret:
+    file: ${SECRETS_PATH:?Set SECRETS_PATH to the prepared secrets directory}/jwt_secret
+  gemini_api_key:
+    file: ${SECRETS_PATH:?Set SECRETS_PATH to the prepared secrets directory}/gemini_api_key
+volumes:
+  app_data:
+  app_backups:
+  caddy_data:
+  caddy_config:

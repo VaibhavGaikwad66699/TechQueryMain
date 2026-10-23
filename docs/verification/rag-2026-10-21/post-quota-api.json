@@ -1,0 +1,13 @@
+{
+  "http_status": 200,
+  "scope": "real API after daily embedding quota exhaustion; approved Java book evidence",
+  "embedded_chunks": 1900,
+  "remaining_embeddings": 1418,
+  "processing_active": false,
+  "retrieval_mode": "hybrid",
+  "response_mode": "generated",
+  "answer": "A file channel tryLock call always returns immediately. [javaNotesForProfessionals, PDF p. 484]\n\nA null return value from tryLock indicates that no file lock was acquired. [javaNotesForProfessionals, PDF p. 484]",
+  "source_document_ids": [
+    4
+  ]
+}

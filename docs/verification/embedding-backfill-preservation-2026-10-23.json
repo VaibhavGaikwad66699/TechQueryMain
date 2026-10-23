@@ -1,0 +1,91 @@
+{
+  "checked_at": "2026-10-23T11:30:49.694579+00:00",
+  "chunk_text_identity_preserved": true,
+  "existing_vectors_preserved": true,
+  "non_embedding_metadata_preserved": true,
+  "new_vectors_compatible": true,
+  "new_embeddings_saved": 1001,
+  "original_vectors_checked": 3680,
+  "other_tables": {
+    "users": {
+      "rows": 3,
+      "preserved": true
+    },
+    "user_preferences": {
+      "rows": 3,
+      "preserved": true
+    },
+    "documents": {
+      "rows": 4,
+      "preserved": true
+    },
+    "conversations": {
+      "rows": 3,
+      "preserved": true
+    },
+    "messages": {
+      "rows": 10,
+      "preserved": true
+    },
+    "user_subjects": {
+      "rows": 0,
+      "preserved": true
+    },
+    "library_migrations": {
+      "rows": 1,
+      "preserved": true
+    },
+    "extraction_checkpoints": {
+      "rows": 0,
+      "preserved": true
+    },
+    "extraction_pages": {
+      "rows": 0,
+      "preserved": true
+    }
+  },
+  "books": [
+    {
+      "document_id": 4,
+      "subject": "Java",
+      "status": "partial",
+      "sha256": "8751bee1658e8b2a247311eb9179625a4216b62f76d4b21545fb68e495dba706",
+      "pdf_preserved": true,
+      "matches_original_source": true,
+      "chunks": 3318,
+      "compatible_embeddings": 2560
+    },
+    {
+      "document_id": 5,
+      "subject": "C",
+      "status": "partial",
+      "sha256": "4d9133ac6d74b412f2484aca91c482ca66b8d46ed7f94a317740fa34cebd9b36",
+      "pdf_preserved": true,
+      "matches_original_source": true,
+      "chunks": 1124,
+      "compatible_embeddings": 706
+    },
+    {
+      "document_id": 6,
+      "subject": "C++",
+      "status": "partial",
+      "sha256": "7b53f43eae83ef1260f02f6a492fdda498e71e4dff81b7b9306652d5d4e65918",
+      "pdf_preserved": true,
+      "matches_original_source": true,
+      "chunks": 2323,
+      "compatible_embeddings": 724
+    },
+    {
+      "document_id": 7,
+      "subject": "Python",
+      "status": "partial",
+      "sha256": "f5e2868ad977858fa0fa3eb123282f15a06f6eb4dd2b7c3a883e1dd1e138f61f",
+      "pdf_preserved": true,
+      "matches_original_source": true,
+      "chunks": 2555,
+      "compatible_embeddings": 691
+    }
+  ],
+  "chunk_ids_preserved": true,
+  "all_preserved": true
+}

@@ -1,0 +1,174 @@
+{
+  "checked_at": "2026-10-26T11:57:54.464642+00:00",
+  "state": "quota_reached",
+  "initial_compatible_embeddings": 4681,
+  "new_embeddings_saved": 1001,
+  "current_compatible_embeddings": 5682,
+  "missing_embeddings": 3638,
+  "total_chunks": 9320,
+  "coverage_percent": 60.97,
+  "books": [
+    {
+      "document_id": 4,
+      "language": "Java",
+      "status": "partial",
+      "stored_and_original_pdf_preserved": true,
+      "total_chunks": 3318,
+      "embedded_chunks": 2802,
+      "extraction": {
+        "total_pages": 982,
+        "saved_pages": 982,
+        "complete": true,
+        "extractor": null
+      },
+      "missing_embeddings": 516,
+      "unverified_embeddings": 0,
+      "legacy_text_chunks": 3318,
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimensions": 768,
+      "provider_use_allowed": true,
+      "semantic_ready": false
+    },
+    {
+      "document_id": 5,
+      "language": "C",
+      "status": "partial",
+      "stored_and_original_pdf_preserved": true,
+      "total_chunks": 1124,
+      "embedded_chunks": 965,
+      "extraction": {
+        "total_pages": 342,
+        "saved_pages": 342,
+        "complete": true,
+        "extractor": null
+      },
+      "missing_embeddings": 159,
+      "unverified_embeddings": 0,
+      "legacy_text_chunks": 0,
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimensions": 768,
+      "provider_use_allowed": true,
+      "semantic_ready": false
+    },
+    {
+      "document_id": 6,
+      "language": "C++",
+      "status": "partial",
+      "stored_and_original_pdf_preserved": true,
+      "total_chunks": 2323,
+      "embedded_chunks": 982,
+      "extraction": {
+        "total_pages": 708,
+        "saved_pages": 708,
+        "complete": true,
+        "extractor": null
+      },
+      "missing_embeddings": 1341,
+      "unverified_embeddings": 0,
+      "legacy_text_chunks": 0,
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimensions": 768,
+      "provider_use_allowed": true,
+      "semantic_ready": false
+    },
+    {
+      "document_id": 7,
+      "language": "Python",
+      "status": "partial",
+      "stored_and_original_pdf_preserved": true,
+      "total_chunks": 2555,
+      "embedded_chunks": 933,
+      "extraction": {
+        "total_pages": 856,
+        "saved_pages": 856,
+        "complete": true,
+        "extractor": null
+      },
+      "missing_embeddings": 1622,
+      "unverified_embeddings": 0,
+      "legacy_text_chunks": 0,
+      "embedding_model": "gemini-embedding-001",
+      "embedding_dimensions": 768,
+      "provider_use_allowed": true,
+      "semantic_ready": false
+    }
+  ],
+  "all_previous_vectors_preserved": true,
+  "chunk_identity_text_and_non_embedding_metadata_preserved": true,
+  "all_other_tables_preserved": {
+    "users": {
+      "rows": 4,
+      "all_fields_identical": true
+    },
+    "user_preferences": {
+      "rows": 4,
+      "all_fields_identical": true
+    },
+    "conversations": {
+      "rows": 4,
+      "all_fields_identical": true
+    },
+    "messages": {
+      "rows": 12,
+      "all_fields_identical": true
+    },
+    "user_subjects": {
+      "rows": 0,
+      "all_fields_identical": true
+    },
+    "library_migrations": {
+      "rows": 1,
+      "all_fields_identical": true
+    },
+    "extraction_checkpoints": {
+      "rows": 0,
+      "all_fields_identical": true
+    },
+    "extraction_pages": {
+      "rows": 0,
+      "all_fields_identical": true
+    }
+  },
+  "pdfs_preserved": true,
+  "sqlite_integrity_and_foreign_keys_passed": true,
+  "model": "gemini-embedding-001",
+  "dimensions": 768,
+  "key_model_or_billing_changed": false,
+  "reextraction_performed": false,
+  "public_redeployed": false,
+  "workers_running": false,
+  "retry_scheduled": false,
+  "last_provider_failure": {
+    "document_id": 5,
+    "error_type": "ClientError",
+    "code": 429,
+    "status": "RESOURCE_EXHAUSTED",
+    "quota": [
+      {
+        "quotaMetric": "generativelanguage.googleapis.com/embed_content_free_tier_requests",
+        "quotaId": "EmbedContentRequestsPerDayPerUserPerProjectPerModel-FreeTier",
+        "quotaValue": "1000"
+      }
+    ],
+    "retry_delay": "68558s"
+  },
+  "last_run_state": "quota_reached",
+  "indexing_tests_passed": 17,
+  "release_dataset_refreshed": true,
+  "release_dataset_summary": {
+    "conversations": 0,
+    "document_chunks": 9320,
+    "documents": 4,
+    "extraction_checkpoints": 0,
+    "extraction_pages": 0,
+    "messages": 0,
+    "user_preferences": 0,
+    "user_subjects": 0,
+    "users": 0,
+    "stored_embeddings": 5682
+  },
+  "release_dataset_previous_embeddings": 4681,
+  "release_dataset_previous_bundle_preserved": true,
+  "release_dataset_bytes": 75255808,
+  "approximate_provider_retry_hint_ist": "2026-10-27T12:30:46.237811+05:30"
+}

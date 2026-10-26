@@ -1,7 +1,7 @@
 {
   "format": 1,
   "kind": "default-library",
-  "created_at": "2026-10-23T14:34:53.163751+00:00",
+  "created_at": "2026-10-26T11:58:05.996793+00:00",
   "summary": {
     "conversations": 0,
     "document_chunks": 9320,
@@ -12,7 +12,7 @@
     "user_preferences": 0,
     "user_subjects": 0,
     "users": 0,
-    "stored_embeddings": 4681
+    "stored_embeddings": 5682
   },
   "embedding_model": "gemini-embedding-001",
   "embedding_dimensions": 768,
@@ -36,8 +36,8 @@
       "sha256": "f5e2868ad977858fa0fa3eb123282f15a06f6eb4dd2b7c3a883e1dd1e138f61f"
     },
     "techquery.db": {
-      "bytes": 64303104,
-      "sha256": "b9145300b735a67c620e5426322e557ce69ed2deaa9afaeed1724aa66ca06b10"
+      "bytes": 75255808,
+      "sha256": "df326cc3c5ac700e222a4aa251bfa4d6f79f04f82ac7785f8add9d90d8bb0e95"
     }
   }
 }

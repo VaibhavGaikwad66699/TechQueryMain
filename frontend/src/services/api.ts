@@ -12,6 +12,7 @@ import {
 
 const API_BASE = '/api/v1';
 const REQUEST_TIMEOUT_MS = 30000;
+const AUTH_TIMEOUT_MS = 90000;
 const UPLOAD_TIMEOUT_MS = 300000;
 // Allow the default embedding retries plus two 30-second generation attempts.
 const ANSWER_TIMEOUT_MS = 120000;
@@ -45,10 +46,21 @@ function extractErrorMessage(response: Response, errorData: any): string {
     }
   }
 
+  if ([502, 503, 504].includes(response.status)) {
+    return `TechQuery is temporarily unavailable (${response.status}). The hosting service may be starting or restarting. Wait a minute and try again; this does not mean your password is incorrect.`;
+  }
+
   // 4. Fall back to a short status message
   return response.statusText
     ? `Request failed (${response.status}: ${response.statusText})`
     : `Request failed with status ${response.status}`;
+}
+
+export class ApiError extends Error {
+  constructor(message: string, public readonly status: number) {
+    super(message);
+    this.name = 'ApiError';
+  }
 }
 
 class ApiService {
@@ -100,7 +112,7 @@ class ApiService {
         try { errorData = await response.json(); } catch (err) {
           if (controller.signal.aborted) throw err;
         }
-        throw new Error(extractErrorMessage(response, errorData));
+        throw new ApiError(extractErrorMessage(response, errorData), response.status);
       }
       // Keep the timeout active while receiving/parsing the body too.
       return await response.json();
@@ -163,7 +175,7 @@ class ApiService {
     const res = await this.request<{ access_token: string; user: User }>('/auth/register', {
       method: 'POST',
       body: JSON.stringify(data),
-    });
+    }, AUTH_TIMEOUT_MS);
     this.setToken(res.access_token);
     return res;
   }
@@ -172,7 +184,7 @@ class ApiService {
     const res = await this.request<{ access_token: string; user: User }>('/auth/login', {
       method: 'POST',
       body: JSON.stringify(data),
-    });
+    }, AUTH_TIMEOUT_MS);
     this.setToken(res.access_token);
     return res;
   }

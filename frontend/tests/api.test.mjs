@@ -11,6 +11,35 @@ globalThis.localStorage = { getItem: () => null, setItem() {}, removeItem() {} }
 const { api } = await import('data:text/javascript;base64,' + Buffer.from(compiled).toString('base64'));
 after(() => { globalThis.fetch = originalFetch; delete globalThis.localStorage; });
 
+test('hosting failures keep HTTP status, preserve the token and do not repeat login writes', async () => {
+  for (const status of [502, 503, 504]) {
+    let calls = 0;
+    api.setToken('saved-session-token');
+    globalThis.fetch = async () => { calls++; return new Response('<html>Host restarting</html>', {status}); };
+    await assert.rejects(api.login({email:'demo@example.com', password:'unused'}),
+      error => error.status === status && /temporarily unavailable/.test(error.message) && /password/.test(error.message));
+    assert.equal(calls, 1);
+    assert.equal(api.getToken(), 'saved-session-token');
+  }
+  api.setToken(null);
+});
+
+test('registration and login allow a cold start without automatically retrying writes', async () => {
+  const originalRequest = api.request;
+  let calls = 0;
+  api.request = async (path, options, timeout) => {
+    calls++;
+    assert.ok(['/auth/register','/auth/login'].includes(path));
+    assert.equal(timeout, 90000);
+    throw new Error('Uncertain result; check before retrying.');
+  };
+  try {
+    await assert.rejects(api.register({email:'demo@example.com',username:'Demo',password:'unused'}));
+    await assert.rejects(api.login({email:'demo@example.com',password:'unused'}));
+    assert.equal(calls, 2);
+  } finally { api.request = originalRequest; }
+});
+
 test('validation errors show a short message without echoing submitted input', async () => {
   globalThis.fetch = async () => new Response(JSON.stringify({detail:[{msg:'Question is too long', input:'private draft'}]}), {status:422});
   await assert.rejects(api.directQuery({question:'private draft'}), {message:'Question is too long'});

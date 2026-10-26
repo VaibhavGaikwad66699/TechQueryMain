@@ -3,6 +3,7 @@ from datetime import datetime, timezone
 import hashlib
 import json
 from pathlib import Path
+from sqlalchemy.orm import object_session
 
 from app.core.scope import SUPPORTED_LANGUAGES
 from app.services.embedding_service import read_metadata
@@ -11,6 +12,11 @@ LOCAL_ONLY = "local_only"
 
 
 def provider_use_allowed(document):
+    from app.models.document import DocumentChunk
+    session = object_session(document)
+    if session is not None:
+        rows = session.query(DocumentChunk.metadata_json).filter(DocumentChunk.document_id == document.id).yield_per(64)
+        return all(read_metadata(row.metadata_json).get('provider_access') != LOCAL_ONLY for row in rows)
     return all(read_metadata(chunk.metadata_json).get("provider_access") != LOCAL_ONLY
         for chunk in document.chunks)
 

@@ -38,11 +38,12 @@ async def initialized(app: FastAPI):
         recover_interrupted(db)
         if settings.ENVIRONMENT == 'production':
             from app.database.library_migration import DEFAULT_BOOKS
-            from app.models.document import Document
+            from app.models.document import Document, DocumentChunk
             from app.services.extraction_service import file_digest
             for subject, (name, digest) in DEFAULT_BOOKS.items():
                 books = db.query(Document).filter_by(is_default=True, subject=subject, original_filename=name).all()
-                if len(books) != 1 or not books[0].chunks or file_digest(storage_service.get_file_path(books[0].filename)) != digest:
+                if (len(books) != 1 or not db.query(DocumentChunk.id).filter_by(document_id=books[0].id).first()
+                        or file_digest(storage_service.get_file_path(books[0].filename)) != digest):
                     raise RuntimeError('Initialize the verified four-book dataset before starting production')
     yield
 

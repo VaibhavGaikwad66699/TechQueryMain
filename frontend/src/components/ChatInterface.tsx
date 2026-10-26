@@ -32,6 +32,12 @@ const getResponseModeDetails = (
       badgeClass: 'bg-brand-500/10 text-brand-500 border-brand-500/30 font-semibold',
     };
   }
+  if (mode === 'general_ai') {
+    return {
+      label: 'General AI · Not book-verified',
+      badgeClass: 'bg-amber-500/10 text-amber-500 border-amber-500/30 font-semibold',
+    };
+  }
   if (mode === 'source_excerpts') {
     return {
       label: 'PDF excerpts',
@@ -265,10 +271,10 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({
 
             <div>
               <h2 className="text-xl md:text-2xl font-black text-slate-100 tracking-tight">
-                Answers backed by your books
+                Book answers, with general AI when needed
               </h2>
               <p className="text-xs text-slate-400 mt-2 leading-relaxed">
-                Start with the included C, C++, Java, and Python books, or add a personal subject and reference PDF in Knowledge Base. Answers use your selected books and learning preferences, with sources you can check.
+                Start with the included C, C++, Java, and Python books, or add a personal subject and reference PDF in Knowledge Base. Book answers include sources you can check. When the books cannot support a question, an available general AI answer is clearly labelled and follows your learning preferences.
               </p>
             </div>
 

@@ -48,6 +48,8 @@ def query_knowledge_base(
     )
     if result.cited_source_keys:
         sources = [s for s in sources if f"{s.document_id}:{s.chunk_index}" in result.cited_source_keys]
+    if not result.context_used:
+        sources = []
 
     return QueryResponse(
         answer=result.answer,

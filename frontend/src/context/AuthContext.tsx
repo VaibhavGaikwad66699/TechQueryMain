@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
-import { api } from '../services/api';
+import { api, ApiError } from '../services/api';
 import { User, UserPreference } from '../types';
 
 interface AuthContextType {
@@ -45,10 +45,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       } else {
         setUser(null);
       }
-    } catch {
+    } catch (error) {
       if (version !== sessionVersion.current) return;
-      api.setToken(null);
+      // A sleeping/restarting host is not evidence that a JWT is invalid.
+      if (error instanceof ApiError && error.status === 401) api.setToken(null);
       setUser(null);
+      setPreferences(defaultPreferences);
     } finally {
       if (version === sessionVersion.current) setLoading(false);
     }

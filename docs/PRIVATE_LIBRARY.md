@@ -23,6 +23,8 @@ Library mutations are serialized within the supported single API process. Both s
 
 ## Authorization contract
 
+**General AI fallback (26 October):** with `ALLOW_GENERAL_ANSWERS=true`, unsupported questions may receive a clearly labelled Gemini general-knowledge answer with no PDF citations. Only the question and presentation preferences are sent on that path; private references, subject names and history are excluded. Book-backed generation retains the provider-approval and owner boundaries below. Provider unavailability is disclosed. See `RENDER_RUNTIME_REVIEW_2026_10_26.md`.
+
 - `Document.is_default` explicitly identifies included books. Ordinary uploads cannot set this flag or choose an owner. Uploaded documents always belong to the authenticated user.
 - `UserSubject` stores a name and case-folded key under a user ID, unique per user. Accounts can independently use the same subject name. Default names and `All` are reserved; names have a 100-character limit.
 - Document listings, single-record access, PDF bytes, processing/deletion, health counts and RAG candidate selection all apply the same visibility predicate. Semantic vectors are filtered before provider query embedding or ranking. Generation independently filters supplied document IDs again.

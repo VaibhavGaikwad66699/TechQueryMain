@@ -73,6 +73,7 @@ class Settings(BaseSettings):
     EMBEDDING_MAX_ATTEMPTS: int = Field(default=3, ge=1, le=5)
     GENERATION_TIMEOUT_MS: int = Field(default=30000, ge=1000, le=60000)
     GENERATION_MAX_ATTEMPTS: int = Field(default=2, ge=1, le=3)
+    ALLOW_GENERAL_ANSWERS: bool = True
     RETRIEVAL_MIN_SIMILARITY: float = Field(default=0.65, ge=0, le=1)
 
     # CORS

@@ -179,6 +179,8 @@ def send_message_in_conversation(
     )
     if result.cited_source_keys:
         sources = [s for s in sources if f"{s.document_id}:{s.chunk_index}" in result.cited_source_keys]
+    if not result.context_used:
+        sources = []
     retrieval_mode = ("hybrid" if len({s.retrieval_method for s in sources}) > 1 else sources[0].retrieval_method) if sources else "none"
     suggestions = rag_service.suggested_questions(query_in.question, subject_to_use) if not result.abstained else []
 

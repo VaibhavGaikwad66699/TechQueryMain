@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-26",
+  "status": "tested_local_source_fixes_public_redeployment_pending",
+  "source_folder": "C:\\Users\\Vaibhav\\Desktop\\TechQueryMain",
+  "live_url": "https://techquery-rpq1.onrender.com",
+  "hosted_root_cause": "Intermittent 502/503 not reproduced in bounded public probes; private Render logs/metrics unavailable.",
+  "public_probe": [
+    {
+      "path": "/api/v1/ready",
+      "status": 200,
+      "seconds": 1.25
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "seconds": 1.01
+    }
+  ],
+  "coverage_before": {
+    "seconds": 9.85,
+    "python_peak_mib": 76.05,
+    "chunks": 9320,
+    "compatible_embeddings": 4681,
+    "loaded_relationships": 4
+  },
+  "coverage_after": {
+    "seconds": 8.373,
+    "python_peak_mib": 0.9,
+    "chunks": 9320,
+    "compatible_embeddings": 4681,
+    "loaded_relationships": 0
+  },
+  "backend_tests": {
+    "tests": 242,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "frontend_tests_passed": 14,
+  "frontend_production_build_passed": true,
+  "production_http": {
+    "passed": true,
+    "checks": {
+      "production_frontend_host_docs": true,
+      "register_during_parallel_health": true,
+      "login_jwt_defaults_and_protection": true,
+      "preferences": true,
+      "unconfigured_provider_honest_response": true,
+      "same_filesystem_restart_preserves_account_jwt_preferences": true
+    },
+    "google_calls": 0,
+    "real_data_mutated": false,
+    "public_deployed": false,
+    "container_execution_verified": false,
+    "limitation": "Local process restart retaining the same disposable directory; does not provide persistence on Render Free replacement."
+  },
+  "live_general": {
+    "model": "gemini-3.5-flash-lite",
+    "question": "What is the capital of France?",
+    "response_mode": "general_ai",
+    "answer": "General AI answer \u2014 not verified against your reference books.\n\nThe capital of France is Paris.",
+    "context_used": false,
+    "abstained": false,
+    "embedding_calls": 0,
+    "books_or_user_data_sent": false,
+    "provider_attempts_maximum": 1
+  },
+  "all_original_database_fields_preserved": true,
+  "preserved_databases": {
+    "data/techquery.db": {
+      "all_fields_identical": true,
+      "tables": {
+        "users": 4,
+        "user_preferences": 4,
+        "documents": 4,
+        "conversations": 4,
+        "document_chunks": 9320,
+        "messages": 12,
+        "user_subjects": 0,
+        "library_migrations": 1,
+        "extraction_checkpoints": 0,
+        "extraction_pages": 0
+      }
+    },
+    "backend/data/techquery.db": {
+      "all_fields_identical": true,
+      "tables": {
+        "users": 0,
+        "user_preferences": 0,
+        "documents": 0,
+        "conversations": 0,
+        "document_chunks": 0,
+        "messages": 0
+      }
+    },
+    "backend/techquery.db": {
+      "all_fields_identical": true,
+      "tables": {}
+    },
+    "deploy/seed/techquery.db": {
+      "all_fields_identical": true,
+      "tables": {
+        "users": 0,
+        "user_preferences": 0,
+        "documents": 4,
+        "conversations": 0,
+        "user_subjects": 0,
+        "document_chunks": 9320,
+        "extraction_checkpoints": 0,
+        "messages": 0,
+        "extraction_pages": 0,
+        "library_migrations": 1
+      }
+    }
+  },
+  "pdf_hashes_preserved": 12,
+  "compatible_local_vectors": 4681,
+  "embedding_calls": 0,
+  "model_key_or_billing_changed": false,
+  "docker_image_execution_verified": false,
+  "fresh_browser_visual_review_verified": false,
+  "private_host_logs_available": false,
+  "public_redeployed": false,
+  "git_push": false,
+  "remaining": [
+    "Review and push/redeploy tested source; re-test the hosted login and new general-answer label.",
+    "Render Free local SQLite/PDF/account persistence is ephemeral; this patch does not add durable storage.",
+    "Collect Render logs/metrics/events if 502/503 recurs."
+  ]
+}

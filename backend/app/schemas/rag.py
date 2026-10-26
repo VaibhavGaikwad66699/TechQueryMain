@@ -37,6 +37,6 @@ class QueryResponse(BaseModel):
     message_id: Optional[int] = None
     preferences_applied: dict
     suggested_questions: List[str] = Field(default_factory=list)
-    response_mode: Literal["generated", "source_excerpts", "abstained"] = "source_excerpts"
+    response_mode: Literal["generated", "source_excerpts", "abstained", "general_ai"] = "source_excerpts"
     retrieval_mode: Literal["semantic", "lexical", "hybrid", "none"] = "none"
     abstained: bool = False

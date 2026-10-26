@@ -18,7 +18,7 @@ WORKDIR /app/backend
 COPY backend/requirements.lock.txt ./
 RUN pip install --no-cache-dir -r requirements.lock.txt
 COPY backend/app ./app
-COPY backend/manage_release.py backend/manage_admin.py backend/initialize_default_library.py ./
+COPY backend/manage_release.py backend/manage_admin.py backend/initialize_default_library.py backend/bootstrap_runtime.py ./
 COPY deploy/entrypoint.sh /app/entrypoint.sh
 COPY deploy/seed /app/seed
 COPY --from=frontend /build/dist /app/frontend/dist

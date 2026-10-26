@@ -1,8 +1,12 @@
 # TechQuery project status
 
-Updated: 23 October 2026 (India time). This document records observed evidence, not assumed completion.
+Updated: 26 October 2026 (India time). This document records observed evidence, not assumed completion.
 
 ## Current milestone
+
+**26 October: Render runtime fixes and general-answer fallback are implemented locally in the current `C:\Users\Vaibhav\Desktop\TechQueryMain` checkout; hosted verification remains pending redeployment.** Read `RENDER_RUNTIME_REVIEW_2026_10_26.md`. The live Render homepage/readiness returned 200 during inspection; intermittent 502/503 root cause is unconfirmed without private host logs. Streamed coverage reduced the measured Python allocation peak from 76.05 MiB to 0.90 MiB on the unchanged 9,320-chunk copy. Registration is atomic, temporary host failures preserve saved JWTs, and startup follows configured data paths without overwriting existing databases. Unsupported questions now use explicitly labelled general Gemini knowledge when configured; one synthetic live check succeeded with the unchanged model and no embedding calls. **241 backend tests passed (one skipped), 14 frontend tests and the production build passed.** All real database fields/PDFs/vectors are preserved. Render Free storage resets remain a hosting limitation, not fixed by this patch. No push or public redeployment was performed.
+
+The following sections record earlier milestones; their strict book-only answering contract and deployment status are superseded by the 26 October review where applicable.
 
 **Local release review is complete for the available runtime; stop for the user's project review.** See `LOCAL_RELEASE_REVIEW.md`. Docker/Compose/Caddy execution is blocked because no runtime is installed. No AWS/S3 or public deployment was started. The normal API and frontend are restored on loopback; all real data and the 4,681 saved embeddings are preserved.
 

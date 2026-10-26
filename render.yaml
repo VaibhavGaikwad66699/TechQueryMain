@@ -28,6 +28,8 @@ services:
         value: "768"
       - key: INDEX_MAX_CHUNKS_PER_REQUEST
         value: "16"
+      - key: ALLOW_GENERAL_ANSWERS
+        value: "true"
       - key: MAX_PDF_BYTES
         value: "52428800"
       - key: SECRET_KEY

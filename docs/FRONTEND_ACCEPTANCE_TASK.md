@@ -1,5 +1,7 @@
 # TechQuery frontend acceptance handoff
 
+**26 October follow-up:** Read `RENDER_RUNTIME_REVIEW_2026_10_26.md` first. Verify the new **General AI · Not book-verified** badge, no PDF cards for general answers, copy/history disclosure, and book-supported answers retaining citations. Check HTML 502/503/504 messages and that a temporary `/auth/me` outage does not erase the saved token; real 401 still invalidates it. Verify login/registration loading/cancellation on a slow host and no automatic duplicate writes. New UI behavior has build/unit coverage but no fresh browser visual sign-off.
+
 Backend answer-quality work is recorded in `docs/ANSWER_QUALITY_REVIEW.md`. Read it and current `PROJECT_STATUS.md` first. **No new frontend defect was confirmed during this backend task; the items below require browser verification, not a speculative redesign.**
 
 Work only on confirmed frontend findings. Use disposable accounts/PDFs for mutations; preserve all real data, source PDFs and vectors. Keep API behavior/ownership boundaries and the current design. Do not run embedding backfills, change models/keys/billing, integrate S3, provision resources or deploy.

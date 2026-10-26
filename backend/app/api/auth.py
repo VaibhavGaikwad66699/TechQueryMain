@@ -28,22 +28,15 @@ def register(user_in: UserRegister, db: Session = Depends(get_db)):
     )
     db.add(user)
     try:
+        db.flush()
+        # Keep the account and its initial preferences in one transaction.
+        db.add(UserPreference(user_id=user.id, explanation_level='Intermediate',
+            answer_style='Detailed', include_examples=True, preferred_subject='All'))
         db.commit()
     except IntegrityError:
         db.rollback()
         raise HTTPException(status_code=400, detail="An account with this email address already exists.")
     db.refresh(user)
-
-    # Create default user preference
-    pref = UserPreference(
-        user_id=user.id,
-        explanation_level="Intermediate",
-        answer_style="Detailed",
-        include_examples=True,
-        preferred_subject="All",
-    )
-    db.add(pref)
-    db.commit()
 
     access_token = create_access_token(subject=user.id)
     return {

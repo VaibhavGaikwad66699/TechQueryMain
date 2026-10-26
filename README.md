@@ -2,6 +2,8 @@
 
 TechQuery is a local full-stack AI technical knowledge assistant built with **React**, **FastAPI**, **SQLite**, and **Google Gemini RAG (Retrieval-Augmented Generation)**. Core local workflows have been reviewed; final acceptance checks remain. See the verified project status below.
 
+Questions supported by the selected books retain grounded answers and physical-page citations. With `ALLOW_GENERAL_ANSWERS=true` (default), unsupported questions can receive a **General AI** answer from the existing Gemini model, clearly labelled as not book-verified and carrying no PDF citations. Provider outages/quota errors remain explicit. See [the Render runtime review](docs/RENDER_RUNTIME_REVIEW_2026_10_26.md) for current fixes and hosting limits; local changes require a reviewed push/redeploy before they affect Render.
+
 Every account includes the same four **C, C++, Java and Python Notes for Professionals** books. Users can add personal subjects (for example Biology or Operating Systems), upload reference PDFs, and ask questions using their own explanation level, answer style and example preferences. Custom subjects and uploads belong only to their owner. Guests can use the four default books.
 
 **All my subjects** searches the four defaults plus the signed-in user's own books. A selected subject searches only that subject within this account's visible library. Another user's PDFs, citations, subject names, conversations and preferences are excluded. Private PDF downloads require the owner's authorization; the frontend opens them through an authenticated request. Default books are shared once rather than copied for each new account, and cannot be deleted through the website.

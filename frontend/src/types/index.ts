@@ -81,7 +81,7 @@ export interface SourceReference {
   retrieval_method?: RetrievalMethod;
 }
 
-export type ResponseMode = 'generated' | 'source_excerpts' | 'abstained' | string;
+export type ResponseMode = 'generated' | 'general_ai' | 'source_excerpts' | 'abstained' | string;
 export type RetrievalMode = 'semantic' | 'lexical' | 'hybrid' | 'none' | string;
 
 export interface Message {

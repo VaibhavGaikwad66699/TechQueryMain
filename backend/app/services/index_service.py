@@ -1,6 +1,7 @@
 """Text is saved first, then each embedding batch is committed independently."""
 import json
 import logging
+from sqlalchemy.orm import object_session
 
 from app.core.config import settings
 from app.models.document import Document, DocumentChunk, ExtractionCheckpoint
@@ -13,20 +14,31 @@ logger = logging.getLogger(__name__)
 
 
 def index_coverage(doc):
-    chunks = doc.chunks
-    compatible = sum(embedding_service.compatible_vector(c) is not None for c in chunks)
-    stored = sum(bool(c.embedding_json) for c in chunks)
+    # Status polling must not retain every PDF chunk and vector in the ORM.
+    # Stream small projections, while retaining the same provenance validation.
+    session = object_session(doc)
+    chunks = (session.query(DocumentChunk.content, DocumentChunk.embedding_json, DocumentChunk.metadata_json)
+        .filter(DocumentChunk.document_id == doc.id).yield_per(32)) if session is not None else doc.chunks
+    total = compatible = stored = legacy = 0
+    provider_allowed = True
+    for chunk in chunks:
+        total += 1
+        compatible += embedding_service.compatible_vector(chunk) is not None
+        stored += bool(chunk.embedding_json)
+        metadata = read_metadata(chunk.metadata_json)
+        legacy += metadata.get('extraction_origin') == 'legacy_snapshot'
+        provider_allowed &= metadata.get('provider_access') != 'local_only'
     checkpoint = doc.extraction_checkpoint
     extraction = {'total_pages': checkpoint.total_pages if checkpoint else doc.total_pages,
-        'saved_pages': checkpoint.last_page if checkpoint else (doc.total_pages if chunks else 0),
-        'complete': checkpoint.complete if checkpoint else bool(chunks),
+        'saved_pages': checkpoint.last_page if checkpoint else (doc.total_pages if total else 0),
+        'complete': checkpoint.complete if checkpoint else bool(total),
         'extractor': checkpoint.extractor if checkpoint else None}
-    return {"total_chunks": len(chunks), "embedded_chunks": compatible, 'extraction': extraction,
-        "missing_embeddings": len(chunks) - compatible, "unverified_embeddings": stored - compatible,
-        "legacy_text_chunks": sum(read_metadata(c.metadata_json).get("extraction_origin") == "legacy_snapshot" for c in chunks),
+    return {"total_chunks": total, "embedded_chunks": compatible, 'extraction': extraction,
+        "missing_embeddings": total - compatible, "unverified_embeddings": stored - compatible,
+        "legacy_text_chunks": legacy,
         "embedding_model": settings.EMBEDDING_MODEL, "embedding_dimensions": settings.EMBEDDING_DIMENSIONS,
-        "provider_use_allowed": provider_use_allowed(doc),
-        "semantic_ready": bool(chunks) and extraction['complete'] and compatible == len(chunks)}
+        "provider_use_allowed": bool(provider_allowed),
+        "semantic_ready": bool(total) and extraction['complete'] and compatible == total}
 
 
 class IndexingInProgress(ValueError):

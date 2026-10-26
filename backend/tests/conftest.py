@@ -25,6 +25,9 @@ TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=test_
 def isolate_local_state(monkeypatch, tmp_path):
     # Tests never use the real API key, user database, or document directory.
     monkeypatch.setattr(settings, "GEMINI_API_KEY", "")
+    # Existing grounding regressions explicitly exercise strict book-only mode.
+    # General-answer tests opt into the new default behavior separately.
+    monkeypatch.setattr(settings, "ALLOW_GENERAL_ANSWERS", False)
     monkeypatch.setattr(storage_service, "base_dir", tmp_path)
     monkeypatch.setattr(importlib.import_module("app.main"), "engine", test_engine)
     monkeypatch.setattr(ingestion_jobs, "SessionLocal", TestingSessionLocal)
